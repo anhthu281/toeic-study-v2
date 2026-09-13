@@ -1,0 +1,302 @@
+[
+  {
+    "id": 1,
+    "question": "The manager ______ the report before the meeting.",
+    "options": [
+      "review",
+      "reviews",
+      "reviewing",
+      "reviewed"
+    ],
+    "answer": 1,
+    "grammar": "Subject–verb agreement",
+    "explanation": "The singular subject “manager” takes “reviews.”",
+    "vi": "Giải thích tiếng Việt: The singular subject “manager” takes “reviews.”",
+    "difficulty": "Easy"
+  },
+  {
+    "id": 2,
+    "question": "Please send the invoice ______ email by Friday.",
+    "options": [
+      "at",
+      "on",
+      "by",
+      "to"
+    ],
+    "answer": 2,
+    "grammar": "Prepositions",
+    "explanation": "The standard expression is “by email.”",
+    "vi": "Giải thích tiếng Việt: The standard expression is “by email.”",
+    "difficulty": "Easy"
+  },
+  {
+    "id": 3,
+    "question": "Ms. Brown is responsible ______ organizing the conference.",
+    "options": [
+      "for",
+      "to",
+      "with",
+      "at"
+    ],
+    "answer": 0,
+    "grammar": "Prepositions",
+    "explanation": "Use “responsible for + noun/gerund.”",
+    "vi": "Giải thích tiếng Việt: Use “responsible for + noun/gerund.”",
+    "difficulty": "Easy"
+  },
+  {
+    "id": 4,
+    "question": "The new office will ______ next Monday.",
+    "options": [
+      "open",
+      "opens",
+      "opening",
+      "opened"
+    ],
+    "answer": 0,
+    "grammar": "Verb forms",
+    "explanation": "After “will,” use the base verb “open.”",
+    "vi": "Giải thích tiếng Việt: After “will,” use the base verb “open.”",
+    "difficulty": "Easy"
+  },
+  {
+    "id": 5,
+    "question": "Employees must wear their identification badges ______ work.",
+    "options": [
+      "during",
+      "while",
+      "because",
+      "although"
+    ],
+    "answer": 0,
+    "grammar": "Prepositions",
+    "explanation": "“During” is followed by a noun phrase.",
+    "vi": "Giải thích tiếng Việt: “During” is followed by a noun phrase.",
+    "difficulty": "Easy"
+  },
+  {
+    "id": 6,
+    "question": "The meeting has been postponed ______ the director is unavailable.",
+    "options": [
+      "unless",
+      "because",
+      "despite",
+      "during"
+    ],
+    "answer": 1,
+    "grammar": "Conjunctions",
+    "explanation": "“Because” introduces the reason.",
+    "vi": "Giải thích tiếng Việt: “Because” introduces the reason.",
+    "difficulty": "Easy"
+  },
+  {
+    "id": 7,
+    "question": "We are looking for an assistant who can work ______.",
+    "options": [
+      "efficient",
+      "efficiency",
+      "efficiently",
+      "more efficient"
+    ],
+    "answer": 2,
+    "grammar": "Adverbs",
+    "explanation": "The verb “work” needs the adverb “efficiently.”",
+    "vi": "Giải thích tiếng Việt: The verb “work” needs the adverb “efficiently.”",
+    "difficulty": "Easy"
+  },
+  {
+    "id": 8,
+    "question": "All applications must be submitted ______ 5 p.m.",
+    "options": [
+      "until",
+      "by",
+      "since",
+      "from"
+    ],
+    "answer": 1,
+    "grammar": "Prepositions",
+    "explanation": "“By 5 p.m.” means no later than 5 p.m.",
+    "vi": "Giải thích tiếng Việt: “By 5 p.m.” means no later than 5 p.m.",
+    "difficulty": "Easy"
+  },
+  {
+    "id": 9,
+    "question": "The company plans to ______ a new marketing campaign.",
+    "options": [
+      "launch",
+      "launches",
+      "launched",
+      "launching"
+    ],
+    "answer": 0,
+    "grammar": "Infinitives",
+    "explanation": "After “plans to,” use the base verb.",
+    "vi": "Giải thích tiếng Việt: After “plans to,” use the base verb.",
+    "difficulty": "Easy"
+  },
+  {
+    "id": 10,
+    "question": "Mr. Lee has worked here ______ 2019.",
+    "options": [
+      "for",
+      "since",
+      "during",
+      "from"
+    ],
+    "answer": 1,
+    "grammar": "Present perfect",
+    "explanation": "“Since” is used with a starting point.",
+    "vi": "Giải thích tiếng Việt: “Since” is used with a starting point.",
+    "difficulty": "Easy"
+  },
+  {
+    "id": 11,
+    "question": "The conference room is ______ enough for fifty people.",
+    "options": [
+      "large",
+      "largely",
+      "larger",
+      "largest"
+    ],
+    "answer": 0,
+    "grammar": "Adjectives",
+    "explanation": "“Large” describes the room after “is.”",
+    "vi": "Giải thích tiếng Việt: “Large” describes the room after “is.”",
+    "difficulty": "Easy"
+  },
+  {
+    "id": 12,
+    "question": "Customers can receive a discount ______ they purchase ten or more items.",
+    "options": [
+      "if",
+      "so",
+      "but",
+      "or"
+    ],
+    "answer": 0,
+    "grammar": "Conditionals",
+    "explanation": "“If” introduces the condition.",
+    "vi": "Giải thích tiếng Việt: “If” introduces the condition.",
+    "difficulty": "Easy"
+  },
+  {
+    "id": 13,
+    "question": "The accountant checked the figures ______.",
+    "options": [
+      "careful",
+      "carefully",
+      "carefulness",
+      "care"
+    ],
+    "answer": 1,
+    "grammar": "Adverbs",
+    "explanation": "“Carefully” modifies the verb “checked.”",
+    "vi": "Giải thích tiếng Việt: “Carefully” modifies the verb “checked.”",
+    "difficulty": "Medium"
+  },
+  {
+    "id": 14,
+    "question": "Please contact the receptionist if you need ______ information.",
+    "options": [
+      "additional",
+      "addition",
+      "additionally",
+      "adding"
+    ],
+    "answer": 0,
+    "grammar": "Word forms",
+    "explanation": "The noun “information” needs the adjective “additional.”",
+    "vi": "Giải thích tiếng Việt: The noun “information” needs the adjective “additional.”",
+    "difficulty": "Medium"
+  },
+  {
+    "id": 15,
+    "question": "The flight was delayed ______ bad weather.",
+    "options": [
+      "because",
+      "because of",
+      "although",
+      "while"
+    ],
+    "answer": 1,
+    "grammar": "Prepositions",
+    "explanation": "“Because of” is followed by a noun phrase.",
+    "vi": "Giải thích tiếng Việt: “Because of” is followed by a noun phrase.",
+    "difficulty": "Medium"
+  },
+  {
+    "id": 16,
+    "question": "The sales team ______ its monthly target last week.",
+    "options": [
+      "exceed",
+      "exceeds",
+      "exceeded",
+      "exceeding"
+    ],
+    "answer": 2,
+    "grammar": "Past simple",
+    "explanation": "“Last week” signals the past simple.",
+    "vi": "Giải thích tiếng Việt: “Last week” signals the past simple.",
+    "difficulty": "Medium"
+  },
+  {
+    "id": 17,
+    "question": "The brochure provides detailed information ______ our services.",
+    "options": [
+      "about",
+      "among",
+      "between",
+      "onto"
+    ],
+    "answer": 0,
+    "grammar": "Prepositions",
+    "explanation": "“Information about” is the standard expression.",
+    "vi": "Giải thích tiếng Việt: “Information about” is the standard expression.",
+    "difficulty": "Medium"
+  },
+  {
+    "id": 18,
+    "question": "We need to finish the project ______ the end of the month.",
+    "options": [
+      "in",
+      "at",
+      "by",
+      "on"
+    ],
+    "answer": 2,
+    "grammar": "Prepositions",
+    "explanation": "“By the end of” means no later than that time.",
+    "vi": "Giải thích tiếng Việt: “By the end of” means no later than that time.",
+    "difficulty": "Medium"
+  },
+  {
+    "id": 19,
+    "question": "The company hired a consultant to improve its financial ______.",
+    "options": [
+      "perform",
+      "performed",
+      "performance",
+      "performing"
+    ],
+    "answer": 2,
+    "grammar": "Word forms",
+    "explanation": "The adjective “financial” needs the noun “performance.”",
+    "vi": "Giải thích tiếng Việt: The adjective “financial” needs the noun “performance.”",
+    "difficulty": "Medium"
+  },
+  {
+    "id": 20,
+    "question": "Neither the manager nor the assistants ______ available today.",
+    "options": [
+      "is",
+      "are",
+      "was",
+      "be"
+    ],
+    "answer": 1,
+    "grammar": "Subject–verb agreement",
+    "explanation": "The verb agrees with the nearer plural subject “assistants.”",
+    "vi": "Giải thích tiếng Việt: The verb agrees with the nearer plural subject “assistants.”",
+    "difficulty": "Medium"
+  }
+]
