@@ -1,0 +1,122 @@
+{
+  "part": 1,
+  "title": "Photographs",
+  "description": "Look at each picture and listen to four statements. Choose the statement that best describes what you see in the picture.",
+  "totalQuestions": 6,
+  "questions": [
+    {
+      "id": "P1Q001",
+      "part": 1,
+      "number": 1,
+      "imageUrl": "images/part1/photo1.jpg",
+      "imageDescription": "A woman working at a desk with a computer",
+      "options": [
+        { "id": "A", "text": "The woman is sitting at her desk." },
+        { "id": "B", "text": "The woman is standing by the window." },
+        { "id": "C", "text": "The woman is talking on the phone outside." },
+        { "id": "D", "text": "The woman is reading a newspaper." }
+      ],
+      "correctAnswer": "A",
+      "explanation": {
+        "en": "The image shows a woman sitting at a desk working on a computer. Option A correctly describes this action.",
+        "vi": "Hình ảnh cho thấy một phụ nữ ngồi ở bàn làm việc trên máy tính. Tùy chọn A mô tả chính xác hành động này."
+      },
+      "difficulty": "easy"
+    },
+    {
+      "id": "P1Q002",
+      "part": 1,
+      "number": 2,
+      "imageUrl": "images/part1/photo2.jpg",
+      "imageDescription": "People having a meeting around a conference table",
+      "options": [
+        { "id": "A", "text": "The employees are having lunch in the cafeteria." },
+        { "id": "B", "text": "The employees are sitting around a conference table." },
+        { "id": "C", "text": "The employees are standing outside the building." },
+        { "id": "D", "text": "The employees are working at their desks." }
+      ],
+      "correctAnswer": "B",
+      "explanation": {
+        "en": "The image shows employees gathered around a conference table in a meeting. Option B is the correct description.",
+        "vi": "Hình ảnh cho thấy các nhân viên tập trung xung quanh bàn hội nghị trong một cuộc họp. Tùy chọn B là mô tả đúng."
+      },
+      "difficulty": "easy"
+    },
+    {
+      "id": "P1Q003",
+      "part": 1,
+      "number": 3,
+      "imageUrl": "images/part1/photo3.jpg",
+      "imageDescription": "A delivery person unloading boxes from a truck",
+      "options": [
+        { "id": "A", "text": "The delivery person is parking the truck." },
+        { "id": "B", "text": "The delivery person is unloading boxes from the truck." },
+        { "id": "C", "text": "The delivery person is loading boxes into a car." },
+        { "id": "D", "text": "The delivery person is standing on the road." }
+      ],
+      "correctAnswer": "B",
+      "explanation": {
+        "en": "The image shows a delivery person unloading boxes from a truck. Option B correctly describes this activity.",
+        "vi": "Hình ảnh cho thấy một người giao hàng dỡ những chiếc hộp từ xe tải. Tùy chọn B mô tả chính xác hoạt động này."
+      },
+      "difficulty": "easy"
+    },
+    {
+      "id": "P1Q004",
+      "part": 1,
+      "number": 4,
+      "imageUrl": "images/part1/photo4.jpg",
+      "imageDescription": "Customers shopping in a retail store",
+      "options": [
+        { "id": "A", "text": "The customers are shopping in the store." },
+        { "id": "B", "text": "The customers are closing the store." },
+        { "id": "C", "text": "The customers are waiting outside." },
+        { "id": "D", "text": "The customers are cleaning the shelves." }
+      ],
+      "correctAnswer": "A",
+      "explanation": {
+        "en": "The image depicts customers browsing and shopping in a retail store environment. Option A is the correct answer.",
+        "vi": "Hình ảnh mô tả các khách hàng duyệt và mua sắm ở cửa hàng bán lẻ. Tùy chọn A là câu trả lời đúng."
+      },
+      "difficulty": "easy"
+    },
+    {
+      "id": "P1Q005",
+      "part": 1,
+      "number": 5,
+      "imageUrl": "images/part1/photo5.jpg",
+      "imageDescription": "Construction workers working on a building site",
+      "options": [
+        { "id": "A", "text": "The workers are having a break under a tent." },
+        { "id": "B", "text": "The workers are working on the construction site." },
+        { "id": "C", "text": "The workers are entering the office building." },
+        { "id": "D", "text": "The workers are walking away from the site." }
+      ],
+      "correctAnswer": "B",
+      "explanation": {
+        "en": "The image shows construction workers actively engaged on a building construction site. Option B correctly describes the scene.",
+        "vi": "Hình ảnh cho thấy các công nhân xây dựng đang hoạt động tích cực tại công trường xây dựng. Tùy chọn B mô tả chính xác cảnh tượng."
+      },
+      "difficulty": "easy"
+    },
+    {
+      "id": "P1Q006",
+      "part": 1,
+      "number": 6,
+      "imageUrl": "images/part1/photo6.jpg",
+      "imageDescription": "People boarding an airplane",
+      "options": [
+        { "id": "A", "text": "The passengers are boarding the airplane." },
+        { "id": "B", "text": "The passengers are checking in at the airport counter." },
+        { "id": "C", "text": "The passengers are exiting the terminal." },
+        { "id": "D", "text": "The passengers are waiting for luggage." }
+      ],
+      "correctAnswer": "A",
+      "explanation": {
+        "en": "The image shows passengers in the process of boarding an airplane. Option A is the correct answer.",
+        "vi": "Hình ảnh cho thấy các hành khách đang lên máy bay. Tùy chọn A là câu trả lời đúng."
+      },
+      "difficulty": "easy"
+    }
+  ]
+}
