@@ -1,0 +1,407 @@
+{
+  "part": 5,
+  "title": "Incomplete Sentences",
+  "totalQuestions": 20,
+  "questions": [
+    {
+      "id": "Q001",
+      "part": 5,
+      "number": 1,
+      "question": "The company plans to __________ three new employees next month.",
+      "options": [
+        { "id": "A", "text": "hire" },
+        { "id": "B", "text": "hiring" },
+        { "id": "C", "text": "hired" },
+        { "id": "D", "text": "will be hiring" }
+      ],
+      "correctAnswer": "A",
+      "explanation": {
+        "en": "After 'plans to', we use the base form (infinitive) of the verb. 'Hire' is the correct form.",
+        "vi": "Sau 'plans to', chúng ta dùng dạng cơ bản (infinitive) của động từ. 'Hire' là dạng đúng."
+      },
+      "vocabulary": ["hire (v) - thuê"],
+      "grammarTopic": "Verb forms after 'to'",
+      "difficulty": "easy"
+    },
+    {
+      "id": "Q002",
+      "part": 5,
+      "number": 2,
+      "question": "All employees must __________ their identification badges when entering the building.",
+      "options": [
+        { "id": "A", "text": "wear" },
+        { "id": "B", "text": "wearing" },
+        { "id": "C", "text": "worn" },
+        { "id": "D", "text": "to wear" }
+      ],
+      "correctAnswer": "A",
+      "explanation": {
+        "en": "After 'must', we use the base form of the verb. 'Wear' is correct.",
+        "vi": "Sau 'must', chúng ta dùng dạng cơ bản của động từ. 'Wear' là đúng."
+      },
+      "vocabulary": ["identification badge (n) - thẻ nhân dạng"],
+      "grammarTopic": "Modal verbs",
+      "difficulty": "easy"
+    },
+    {
+      "id": "Q003",
+      "part": 5,
+      "number": 3,
+      "question": "The report was __________ yesterday afternoon by the manager.",
+      "options": [
+        { "id": "A", "text": "completed" },
+        { "id": "B", "text": "completing" },
+        { "id": "C", "text": "complete" },
+        { "id": "D", "text": "completes" }
+      ],
+      "correctAnswer": "A",
+      "explanation": {
+        "en": "This is passive voice (was + past participle). 'Completed' is the past participle form.",
+        "vi": "Đây là câu bị động (was + past participle). 'Completed' là dạng past participle."
+      },
+      "vocabulary": ["report (n) - báo cáo"],
+      "grammarTopic": "Passive voice",
+      "difficulty": "easy"
+    },
+    {
+      "id": "Q004",
+      "part": 5,
+      "number": 4,
+      "question": "Ms. Johnson has been with the company __________ ten years.",
+      "options": [
+        { "id": "A", "text": "since" },
+        { "id": "B", "text": "for" },
+        { "id": "C", "text": "during" },
+        { "id": "D", "text": "while" }
+      ],
+      "correctAnswer": "B",
+      "explanation": {
+        "en": "'For' is used with duration (ten years). 'Since' is used with a specific time point (e.g., 2015).",
+        "vi": "'For' dùng với khoảng thời gian (ten years). 'Since' dùng với một thời điểm cụ thể."
+      },
+      "vocabulary": ["company (n) - công ty"],
+      "grammarTopic": "Prepositions of time",
+      "difficulty": "easy"
+    },
+    {
+      "id": "Q005",
+      "part": 5,
+      "number": 5,
+      "question": "The meeting will take place __________ the conference room on the third floor.",
+      "options": [
+        { "id": "A", "text": "in" },
+        { "id": "B", "text": "on" },
+        { "id": "C", "text": "at" },
+        { "id": "D", "text": "by" }
+      ],
+      "correctAnswer": "A",
+      "explanation": {
+        "en": "'In' is used for rooms and enclosed spaces. The meeting is in the conference room.",
+        "vi": "'In' dùng cho phòng và không gian kín. Cuộc họp là trong phòng hội nghị."
+      },
+      "vocabulary": ["conference room (n) - phòng hội nghị"],
+      "grammarTopic": "Prepositions of place",
+      "difficulty": "easy"
+    },
+    {
+      "id": "Q006",
+      "part": 5,
+      "number": 6,
+      "question": "If the weather is good tomorrow, we __________ the outdoor team building event.",
+      "options": [
+        { "id": "A", "text": "will hold" },
+        { "id": "B", "text": "would hold" },
+        { "id": "C", "text": "hold" },
+        { "id": "D", "text": "holding" }
+      ],
+      "correctAnswer": "A",
+      "explanation": {
+        "en": "This is a first conditional (if + present, will + base). 'Will hold' is correct.",
+        "vi": "Đây là điều kiện loại 1 (if + present, will + base). 'Will hold' là đúng."
+      },
+      "vocabulary": ["team building (n) - xây dựng đội ngũ"],
+      "grammarTopic": "Conditionals (First conditional)",
+      "difficulty": "medium"
+    },
+    {
+      "id": "Q007",
+      "part": 5,
+      "number": 7,
+      "question": "The new software is much __________ than the old system.",
+      "options": [
+        { "id": "A", "text": "efficient" },
+        { "id": "B", "text": "more efficient" },
+        { "id": "C", "text": "most efficient" },
+        { "id": "D", "text": "efficiently" }
+      ],
+      "correctAnswer": "B",
+      "explanation": {
+        "en": "For comparative adjectives, we use 'more + adjective'. 'More efficient' is correct.",
+        "vi": "Để so sánh, ta dùng 'more + adjective'. 'More efficient' là đúng."
+      },
+      "vocabulary": ["efficient (adj) - hiệu quả"],
+      "grammarTopic": "Comparative adjectives",
+      "difficulty": "medium"
+    },
+    {
+      "id": "Q008",
+      "part": 5,
+      "number": 8,
+      "question": "The presentation will be given by Dr. Smith, __________ is a leading expert in the field.",
+      "options": [
+        { "id": "A", "text": "who" },
+        { "id": "B", "text": "which" },
+        { "id": "C", "text": "that" },
+        { "id": "D", "text": "whom" }
+      ],
+      "correctAnswer": "A",
+      "explanation": {
+        "en": "'Who' is used for people. 'Which' and 'that' are for things. Dr. Smith is a person.",
+        "vi": "'Who' dùng cho người. 'Which' và 'that' dùng cho vật. Dr. Smith là một người."
+      },
+      "vocabulary": ["leading (adj) - hàng đầu, expert (n) - chuyên gia"],
+      "grammarTopic": "Relative pronouns",
+      "difficulty": "medium"
+    },
+    {
+      "id": "Q009",
+      "part": 5,
+      "number": 9,
+      "question": "We need to __________ the report before we can submit it to the client.",
+      "options": [
+        { "id": "A", "text": "review" },
+        { "id": "B", "text": "reviewing" },
+        { "id": "C", "text": "reviewed" },
+        { "id": "D", "text": "will review" }
+      ],
+      "correctAnswer": "A",
+      "explanation": {
+        "en": "After 'need to', use the base form. 'Review' is correct.",
+        "vi": "Sau 'need to', dùng dạng cơ bản. 'Review' là đúng."
+      },
+      "vocabulary": ["submit (v) - gửi, nộp"],
+      "grammarTopic": "Verb forms after 'need to'",
+      "difficulty": "easy"
+    },
+    {
+      "id": "Q010",
+      "part": 5,
+      "number": 10,
+      "question": "Although the prices have increased, sales have __________ grown steadily.",
+      "options": [
+        { "id": "A", "text": "still" },
+        { "id": "B", "text": "yet" },
+        { "id": "C", "text": "already" },
+        { "id": "D", "text": "always" }
+      ],
+      "correctAnswer": "A",
+      "explanation": {
+        "en": "'Still' means 'continue to happen despite something'. It fits the contrast with 'although'.",
+        "vi": "'Still' có nghĩa 'vẫn tiếp tục'. Nó phù hợp với sự tương phản 'although'."
+      },
+      "vocabulary": ["steadily (adv) - một cách ổn định"],
+      "grammarTopic": "Adverbs of time",
+      "difficulty": "medium"
+    },
+    {
+      "id": "Q011",
+      "part": 5,
+      "number": 11,
+      "question": "The contract __________ by both parties last Friday.",
+      "options": [
+        { "id": "A", "text": "signed" },
+        { "id": "B", "text": "was signed" },
+        { "id": "C", "text": "has signed" },
+        { "id": "D", "text": "is signed" }
+      ],
+      "correctAnswer": "B",
+      "explanation": {
+        "en": "This is passive voice with past time. 'Was signed' is the correct form (was + past participle).",
+        "vi": "Đây là câu bị động ở quá khứ. 'Was signed' là dạng đúng (was + past participle)."
+      },
+      "vocabulary": ["contract (n) - hợp đồng"],
+      "grammarTopic": "Passive voice - past",
+      "difficulty": "medium"
+    },
+    {
+      "id": "Q012",
+      "part": 5,
+      "number": 12,
+      "question": "Employees are encouraged to __________ their ideas during team meetings.",
+      "options": [
+        { "id": "A", "text": "share" },
+        { "id": "B", "text": "sharing" },
+        { "id": "C", "text": "shared" },
+        { "id": "D", "text": "shares" }
+      ],
+      "correctAnswer": "A",
+      "explanation": {
+        "en": "After 'be encouraged to', use the base form (infinitive). 'Share' is correct.",
+        "vi": "Sau 'be encouraged to', dùng dạng cơ bản (infinitive). 'Share' là đúng."
+      },
+      "vocabulary": ["encouraged (adj) - được khuyến khích"],
+      "grammarTopic": "Verb forms after 'be encouraged to'",
+      "difficulty": "easy"
+    },
+    {
+      "id": "Q013",
+      "part": 5,
+      "number": 13,
+      "question": "The budget for this project has been __________ by management.",
+      "options": [
+        { "id": "A", "text": "approve" },
+        { "id": "B", "text": "approving" },
+        { "id": "C", "text": "approved" },
+        { "id": "D", "text": "approves" }
+      ],
+      "correctAnswer": "C",
+      "explanation": {
+        "en": "With 'has been', use past participle. 'Approved' is the correct form.",
+        "vi": "Với 'has been', dùng past participle. 'Approved' là dạng đúng."
+      },
+      "vocabulary": ["budget (n) - ngân sách", "management (n) - quản lý"],
+      "grammarTopic": "Passive voice - present perfect",
+      "difficulty": "medium"
+    },
+    {
+      "id": "Q014",
+      "part": 5,
+      "number": 14,
+      "question": "The company provides training to __________ improve employee skills.",
+      "options": [
+        { "id": "A", "text": "help" },
+        { "id": "B", "text": "helping" },
+        { "id": "C", "text": "helped" },
+        { "id": "D", "text": "helps" }
+      ],
+      "correctAnswer": "A",
+      "explanation": {
+        "en": "'To help' is an infinitive phrase expressing purpose. 'Help' is correct.",
+        "vi": "'To help' là cụm động từ không định thức biểu thị mục đích. 'Help' là đúng."
+      },
+      "vocabulary": ["training (n) - đào tạo"],
+      "grammarTopic": "Infinitive of purpose",
+      "difficulty": "medium"
+    },
+    {
+      "id": "Q015",
+      "part": 5,
+      "number": 15,
+      "question": "After __________ the presentation, the manager answered questions from the audience.",
+      "options": [
+        { "id": "A", "text": "deliver" },
+        { "id": "B", "text": "delivering" },
+        { "id": "C", "text": "delivered" },
+        { "id": "D", "text": "to deliver" }
+      ],
+      "correctAnswer": "B",
+      "explanation": {
+        "en": "After preposition 'after', use gerund (ing form). 'Delivering' is correct.",
+        "vi": "Sau giới từ 'after', dùng gerund (dạng -ing). 'Delivering' là đúng."
+      },
+      "vocabulary": ["deliver (v) - trình bày, giao"],
+      "grammarTopic": "Gerunds after prepositions",
+      "difficulty": "medium"
+    },
+    {
+      "id": "Q016",
+      "part": 5,
+      "number": 16,
+      "question": "Ms. Chen __________ been promoted to Senior Manager because of her excellent performance.",
+      "options": [
+        { "id": "A", "text": "have" },
+        { "id": "B", "text": "has" },
+        { "id": "C", "text": "having" },
+        { "id": "D", "text": "had" }
+      ],
+      "correctAnswer": "B",
+      "explanation": {
+        "en": "'Ms. Chen' is singular, so 'has' is correct. We use 'has' + past participle for present perfect.",
+        "vi": "'Ms. Chen' là số ít, nên 'has' là đúng. Ta dùng 'has' + past participle cho present perfect."
+      },
+      "vocabulary": ["promoted (adj) - được thăng chức"],
+      "grammarTopic": "Subject-verb agreement (present perfect)",
+      "difficulty": "medium"
+    },
+    {
+      "id": "Q017",
+      "part": 5,
+      "number": 17,
+      "question": "The new policy is designed to __________ productivity and reduce costs.",
+      "options": [
+        { "id": "A", "text": "increasing" },
+        { "id": "B", "text": "increase" },
+        { "id": "C", "text": "increased" },
+        { "id": "D", "text": "to increase" }
+      ],
+      "correctAnswer": "B",
+      "explanation": {
+        "en": "After 'to' in an infinitive phrase, use the base form. 'Increase' is correct.",
+        "vi": "Sau 'to' trong cụm động từ không định thức, dùng dạng cơ bản. 'Increase' là đúng."
+      },
+      "vocabulary": ["policy (n) - chính sách", "productivity (n) - năng suất"],
+      "grammarTopic": "Infinitive verb forms",
+      "difficulty": "easy"
+    },
+    {
+      "id": "Q018",
+      "part": 5,
+      "number": 18,
+      "question": "__________ the tight deadline, the team completed the project on time.",
+      "options": [
+        { "id": "A", "text": "Because of" },
+        { "id": "B", "text": "Despite" },
+        { "id": "C", "text": "Although" },
+        { "id": "D", "text": "In spite" }
+      ],
+      "correctAnswer": "B",
+      "explanation": {
+        "en": "'Despite' and 'In spite of' are used before nouns. The sentence shows contrast, so 'Despite' fits. 'Although' is used before clauses.",
+        "vi": "'Despite' và 'In spite of' dùng trước danh từ. 'Although' dùng trước mệnh đề."
+      },
+      "vocabulary": ["deadline (n) - hạn chót"],
+      "grammarTopic": "Prepositions of concession",
+      "difficulty": "hard"
+    },
+    {
+      "id": "Q019",
+      "part": 5,
+      "number": 19,
+      "question": "The international conference __________ place in Geneva next month.",
+      "options": [
+        { "id": "A", "text": "will take" },
+        { "id": "B", "text": "takes" },
+        { "id": "C", "text": "took" },
+        { "id": "D", "text": "is taking" }
+      ],
+      "correctAnswer": "A",
+      "explanation": {
+        "en": "'Next month' indicates future time. 'Will take' is the correct future form.",
+        "vi": "'Next month' chỉ thời gian tương lai. 'Will take' là dạng tương lai đúng."
+      },
+      "vocabulary": ["conference (n) - hội nghị"],
+      "grammarTopic": "Future simple tense",
+      "difficulty": "easy"
+    },
+    {
+      "id": "Q020",
+      "part": 5,
+      "number": 20,
+      "question": "Only employees with security clearance are __________ to access the server room.",
+      "options": [
+        { "id": "A", "text": "permit" },
+        { "id": "B", "text": "permitting" },
+        { "id": "C", "text": "permitted" },
+        { "id": "D", "text": "permission" }
+      ],
+      "correctAnswer": "C",
+      "explanation": {
+        "en": "With 'are', we use past participle. This is passive voice: 'are permitted' means 'are allowed'.",
+        "vi": "Với 'are', ta dùng past participle. Câu bị động: 'are permitted' có nghĩa 'được phép'."
+      },
+      "vocabulary": ["security clearance (n) - giấy phép bảo mật", "access (v) - truy cập"],
+      "grammarTopic": "Passive voice - permission",
+      "difficulty": "hard"
+    }
+  ]
+}
