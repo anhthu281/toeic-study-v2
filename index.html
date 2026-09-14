@@ -1,76 +1,169 @@
-<!doctype html>
-<html lang="en">
+<!DOCTYPE html>
+<html lang="vi">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>TOEIC Study – V1</title>
-<style>
-:root{--pink:#e86a9b;--pink2:#f7d7e5;--bg:#fffafb;--card:#fff;--text:#27232a;--muted:#77727a;--border:#eadde3;--soft:#fff1f6;--ok:#218a59;--bad:#c7475b}
-*{box-sizing:border-box}body{margin:0;font-family:Inter,system-ui,-apple-system,Segoe UI,sans-serif;background:var(--bg);color:var(--text)}
-body.dark{--bg:#171419;--card:#211d22;--text:#f8f3f6;--muted:#aaa2a8;--border:#3b3339;--soft:#30212a}
-button{font:inherit;cursor:pointer}.app{display:flex;min-height:100vh}.side{width:245px;background:var(--card);border-right:1px solid var(--border);padding:24px 16px;position:fixed;inset:0 auto 0 0}.brand{font-size:23px;font-weight:800;padding:4px 12px 28px}.brand span{color:var(--pink)}.nav button{width:100%;text-align:left;border:0;background:none;color:var(--muted);padding:13px 14px;border-radius:12px;margin:2px 0}.nav button.active,.nav button:hover{background:var(--soft);color:var(--pink);font-weight:700}.main{margin-left:245px;width:calc(100% - 245px);padding:28px 38px;max-width:1500px}.top{display:flex;justify-content:space-between;align-items:center;margin-bottom:28px}.theme{border:1px solid var(--border);background:var(--card);border-radius:12px;padding:9px 12px}.hero{background:linear-gradient(120deg,var(--soft),var(--card));border:1px solid var(--border);border-radius:22px;padding:30px;margin-bottom:22px}.hero h1{margin:0 0 8px;font-size:31px}.muted{color:var(--muted)}.actions{display:flex;gap:10px;margin-top:22px;flex-wrap:wrap}.primary,.secondary{border-radius:12px;padding:11px 17px;border:1px solid var(--pink)}.primary{background:var(--pink);color:white}.secondary{background:var(--card);color:var(--pink)}.grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin:20px 0}.stat,.part,.panel{background:var(--card);border:1px solid var(--border);border-radius:18px;padding:19px}.stat b{font-size:25px;display:block;margin-top:6px}.parts{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}.part h3{margin:8px 0}.pill{display:inline-block;font-size:12px;padding:5px 9px;border-radius:20px;background:var(--soft);color:var(--pink);font-weight:700}.progress{height:8px;background:var(--border);border-radius:9px;overflow:hidden;margin:14px 0}.progress i{display:block;height:100%;background:var(--pink);width:0}.hidden{display:none}.practice-head{display:flex;justify-content:space-between;gap:15px;align-items:center}.timer{font-weight:800;color:var(--pink);font-size:18px}.qcard{max-width:850px;margin:24px auto;background:var(--card);border:1px solid var(--border);border-radius:22px;padding:28px}.qnum{color:var(--pink);font-weight:800}.question{font-size:23px;line-height:1.45;margin:16px 0 22px}.option{width:100%;display:block;text-align:left;padding:15px;margin:10px 0;border:1px solid var(--border);background:var(--card);color:var(--text);border-radius:13px}.option.selected{border:2px solid var(--pink);background:var(--soft)}.navrow{display:flex;justify-content:space-between;margin-top:24px;gap:10px}.numbers{display:flex;flex-wrap:wrap;gap:6px;margin-top:20px}.numbers button{width:34px;height:34px;border-radius:8px;border:1px solid var(--border);background:var(--card);color:var(--text)}.numbers button.done{background:var(--pink2);border-color:var(--pink)}.result-score{font-size:52px;font-weight:850;color:var(--pink)}.review{border-top:1px solid var(--border);padding:18px 0}.correct{color:var(--ok);font-weight:700}.wrong{color:var(--bad);font-weight:700}.list{display:grid;gap:12px}.part .muted{font-size:14px}.footer-note{font-size:12px;color:var(--muted);margin-top:24px}
-@media(max-width:1000px){.grid,.parts{grid-template-columns:repeat(2,1fr)}.side{width:210px}.main{margin-left:210px;width:calc(100% - 210px);padding:24px}}
-@media(max-width:700px){.app{display:block}.side{position:sticky;width:100%;height:auto;z-index:5;border-right:0;border-bottom:1px solid var(--border);padding:10px}.brand{padding:7px 10px}.nav{display:flex;overflow:auto;gap:4px}.nav button{white-space:nowrap;width:auto;margin:0}.main{margin:0;width:100%;padding:16px}.hero h1{font-size:25px}.grid,.parts{grid-template-columns:1fr 1fr}.qcard{padding:20px}.question{font-size:19px}.top{margin-bottom:16px}}
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TOEIC Reading - Luyện tập Part 5, 6, 7</title>
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-<div class="app">
-<aside class="side">
-<div class="brand">TOEIC <span>Study</span></div>
-<nav class="nav">
-<button class="active" data-page="home">Home</button><button data-page="practice">Practice</button><button data-page="mock">Mock Test</button><button data-page="vocab">Vocabulary</button><button data-page="grammar">Grammar</button><button data-page="mistakes">Mistakes</button><button data-page="progress">Progress</button>
-</nav>
-</aside>
-<main class="main">
-<div class="top"><div class="muted">Your personal TOEIC learning space</div><button class="theme" id="theme">🌙 Dark mode</button></div>
+    <div class="app">
+        <aside class="sidebar">
+            <div class="logo">TOEIC<br><span>Reading</span></div>
+            <nav class="nav">
+                <button class="nav-btn active" data-page="dashboard">📊 Dashboard</button>
+                <button class="nav-btn" data-page="part5">Part 5</button>
+                <button class="nav-btn" data-page="part6">Part 6</button>
+                <button class="nav-btn" data-page="part7">Part 7</button>
+                <button class="nav-btn" data-page="full-test">Bài thi đầy đủ</button>
+                <button class="nav-btn" data-page="history">Lịch sử</button>
+                <hr style="margin: 20px 0; border: none; border-top: 1px solid var(--border);">
+                <button class="nav-btn" id="theme-toggle">🌙 Dark mode</button>
+            </nav>
+        </aside>
 
-<section id="home" class="page">
-<div class="hero"><span class="pill">BEGINNER • TARGET 600+</span><h1>Good morning! 👋</h1><div class="muted">Ready to improve your TOEIC score?</div><div class="actions"><button class="primary" onclick="showPage('practice')">Continue Learning</button><button class="secondary" onclick="showPage('mock')">Take a Mock Test</button></div></div>
-<div class="grid">
-<div class="stat"><span class="muted">Estimated score</span><b id="homeScore">—</b></div><div class="stat"><span class="muted">Questions completed</span><b id="homeDone">0</b></div><div class="stat"><span class="muted">Accuracy</span><b id="homeAcc">—</b></div><div class="stat"><span class="muted">Study streak</span><b>0 days</b></div>
-</div>
-<h2>Learning Progress</h2><div class="panel">
-<div>Listening<div class="progress"><i style="width:0"></i></div></div>
-<div>Reading<div class="progress"><i id="readingProgress" style="width:0"></i></div></div>
-<div>Vocabulary<div class="progress"><i style="width:0"></i></div></div>
-<div>Grammar<div class="progress"><i style="width:0"></i></div></div></div>
-<h2>TOEIC Parts</h2><div class="parts" id="parts"></div>
-</section>
+        <main class="main-content">
+            <!-- DASHBOARD -->
+            <section id="dashboard" class="page">
+                <div class="header">
+                    <h1>📚 Dashboard - Luyện tập TOEIC Reading</h1>
+                    <p>Cải thiện kỹ năng đọc tiếng Anh của bạn</p>
+                </div>
 
-<section id="practice" class="page hidden">
-<div class="practice-head"><div><span class="pill">READING • PART 5</span><h1>Incomplete Sentences</h1><div class="muted">20 beginner-friendly demo questions</div></div><div class="timer" id="timer">15:00</div></div>
-<div class="progress"><i id="quizProgress"></i></div>
-<div class="qcard"><div class="qnum" id="qnum"></div><div class="question" id="question"></div><div id="options"></div><div class="navrow"><button class="secondary" id="prev">Previous</button><button class="secondary" id="mark">Mark for Review</button><button class="primary" id="next">Next</button></div><div class="numbers" id="numbers"></div></div>
-</section>
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <div class="stat-label">Bài thi hoàn thành</div>
+                        <div class="stat-value" id="completedTests">0</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-label">Câu đã làm</div>
+                        <div class="stat-value" id="totalQuestions">0</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-label">Độ chính xác</div>
+                        <div class="stat-value" id="accuracy">—</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-label">Điểm gần nhất</div>
+                        <div class="stat-value" id="lastScore">—</div>
+                    </div>
+                </div>
 
-<section id="mock" class="page hidden">
-<div class="hero"><span class="pill">MOCK TEST</span><h1>TOEIC Mock Test</h1><p class="muted">V1 contains a compact demo flow. The full 200-question test can be connected to your question bank later.</p><div class="grid"><div class="stat"><span class="muted">Listening</span><b>100</b></div><div class="stat"><span class="muted">Reading</span><b>100</b></div><div class="stat"><span class="muted">Time</span><b>120 min</b></div><div class="stat"><span class="muted">Mode</span><b>Demo</b></div></div><button class="primary" onclick="startPractice()">Start Demo Test</button></div>
-</section>
+                <div class="parts-section">
+                    <h2>Các phần thi</h2>
+                    <div class="parts-grid">
+                        <div class="part-card" onclick="navigateToPage('part5')">
+                            <div class="part-number">5</div>
+                            <div class="part-title">Incomplete Sentences</div>
+                            <div class="part-desc">30 câu - Chọn từ/cụm từ đúng</div>
+                            <div class="part-progress"><div class="progress-bar" id="part5-progress"></div></div>
+                            <div class="part-action">Luyện tập →</div>
+                        </div>
+                        <div class="part-card" onclick="navigateToPage('part6')">
+                            <div class="part-number">6</div>
+                            <div class="part-title">Text Completion</div>
+                            <div class="part-desc">16 câu - Hoàn thành đoạn văn</div>
+                            <div class="part-progress"><div class="progress-bar" id="part6-progress"></div></div>
+                            <div class="part-action">Luyện tập →</div>
+                        </div>
+                        <div class="part-card" onclick="navigateToPage('part7')">
+                            <div class="part-number">7</div>
+                            <div class="part-title">Reading Comprehension</div>
+                            <div class="part-desc">54 câu - Đọc hiểu</div>
+                            <div class="part-progress"><div class="progress-bar" id="part7-progress"></div></div>
+                            <div class="part-action">Luyện tập →</div>
+                        </div>
+                    </div>
+                </div>
+            </section>
 
-<section id="vocab" class="page hidden"><div class="hero"><span class="pill">VOCABULARY</span><h1>Build your TOEIC vocabulary</h1><p class="muted">The V1 shell is ready for your vocabulary dataset. Add licensed/authorized vocabulary content to populate this area.</p><div class="actions"><button class="primary">Start Flashcards</button></div></div></section>
-<section id="grammar" class="page hidden"><div class="hero"><span class="pill">GRAMMAR</span><h1>TOEIC Grammar</h1><p class="muted">Practice core topics such as word forms, tenses, prepositions and subject–verb agreement.</p></div><div class="parts"><div class="part"><span class="pill">WORD FORMS</span><h3>Choose the correct form</h3><p class="muted">Noun, verb, adjective and adverb patterns.</p></div><div class="part"><span class="pill">TENSES</span><h3>Time & verb patterns</h3><p class="muted">Practice common TOEIC tense signals.</p></div><div class="part"><span class="pill">PREPOSITIONS</span><h3>Common combinations</h3><p class="muted">Learn high-frequency workplace expressions.</p></div><div class="part"><span class="pill">AGREEMENT</span><h3>Subject–verb agreement</h3><p class="muted">Build accuracy in Part 5.</p></div></div></section>
-<section id="mistakes" class="page hidden"><h1>My Mistakes</h1><p class="muted">Questions you answered incorrectly in this browser.</p><div class="list" id="mistakeList"></div></section>
-<section id="progress" class="page hidden"><h1>My Progress</h1><div class="grid"><div class="stat"><span class="muted">Best demo score</span><b id="bestScore">—</b></div><div class="stat"><span class="muted">Average accuracy</span><b id="avgAcc">—</b></div><div class="stat"><span class="muted">Questions</span><b id="progDone">0</b></div><div class="stat"><span class="muted">Target</span><b>600+</b></div></div><div class="panel"><h3>How the score works in V1</h3><p class="muted">The demo reports accuracy and an estimated score indicator. It is not an official ETS TOEIC score.</p></div></section>
-</main></div>
+            <!-- PART 5 -->
+            <section id="part5" class="page hidden">
+                <div class="header">
+                    <h1>Part 5 - Incomplete Sentences</h1>
+                    <p>Chọn từ hoặc cụm từ thích hợp để hoàn thành câu</p>
+                </div>
+                <div id="part5-content"></div>
+            </section>
 
-<script>
-const questions = [{"q": "The manager ______ the report before the meeting.", "a": ["review", "reviews", "reviewing", "reviewed"], "c": 1, "e": "The subject 'manager' is singular, so the present simple verb takes -s: reviews."}, {"q": "Please send the invoice ______ email by Friday.", "a": ["at", "on", "by", "to"], "c": 2, "e": "The expression 'by email' is used to describe the method of sending."}, {"q": "Ms. Brown is responsible ______ organizing the conference.", "a": ["for", "to", "with", "at"], "c": 0, "e": "The correct collocation is 'be responsible for + noun/gerund'."}, {"q": "The new office will ______ next Monday.", "a": ["open", "opens", "opening", "opened"], "c": 0, "e": "After 'will', use the base form of the verb: will open."}, {"q": "Employees must wear their identification badges ______ work.", "a": ["during", "while", "because", "although"], "c": 0, "e": "'During' is followed by a noun phrase such as 'work'."}, {"q": "The meeting has been postponed ______ the director is unavailable.", "a": ["unless", "because", "despite", "during"], "c": 1, "e": "'Because' introduces the reason the meeting was postponed."}, {"q": "We are looking for an assistant who can work ______.", "a": ["efficient", "efficiency", "efficiently", "more efficient"], "c": 2, "e": "'Work' is a verb, so an adverb is needed: efficiently."}, {"q": "All applications must be submitted ______ 5 p.m.", "a": ["until", "by", "since", "from"], "c": 1, "e": "'By 5 p.m.' means no later than 5 p.m."}, {"q": "The company plans to ______ a new marketing campaign.", "a": ["launch", "launches", "launched", "launching"], "c": 0, "e": "After 'plans to', use the base form: to launch."}, {"q": "Mr. Lee has worked here ______ 2019.", "a": ["for", "since", "during", "from"], "c": 1, "e": "'Since' is used with a starting point in time: since 2019."}, {"q": "The conference room is ______ enough for fifty people.", "a": ["large", "largely", "larger", "largest"], "c": 0, "e": "'Is' links the subject to an adjective: large."}, {"q": "Customers can receive a discount ______ they purchase ten or more items.", "a": ["if", "so", "but", "or"], "c": 0, "e": "'If' introduces the condition for receiving the discount."}, {"q": "The accountant checked the figures ______.", "a": ["careful", "carefully", "carefulness", "care"], "c": 1, "e": "'Checked' is a verb modified by the adverb 'carefully'."}, {"q": "Please contact the receptionist if you need ______ information.", "a": ["additional", "addition", "additionally", "adding"], "c": 0, "e": "'Information' is a noun and needs the adjective 'additional'."}, {"q": "The flight was delayed ______ bad weather.", "a": ["because", "because of", "although", "while"], "c": 1, "e": "'Because of' is followed by a noun phrase: bad weather."}, {"q": "The sales team ______ its monthly target last week.", "a": ["exceed", "exceeds", "exceeded", "exceeding"], "c": 2, "e": "'Last week' signals the past simple: exceeded."}, {"q": "The brochure provides detailed information ______ our services.", "a": ["about", "among", "between", "onto"], "c": 0, "e": "'Information about' is the standard collocation."}, {"q": "We need to finish the project ______ the end of the month.", "a": ["in", "at", "by", "on"], "c": 2, "e": "'By the end of the month' means no later than the end of the month."}, {"q": "The company hired a consultant to improve its financial ______.", "a": ["perform", "performed", "performance", "performing"], "c": 2, "e": "'Financial' is an adjective, so a noun is required: performance."}, {"q": "Neither the manager nor the assistants ______ available today.", "a": ["is", "are", "was", "be"], "c": 1, "e": "With 'neither...nor', the verb agrees with the nearer subject, 'assistants' (plural): are."}];
-let idx=0, answers=Array(questions.length).fill(null), marked=Array(questions.length).fill(false), seconds=900, interval=null;
-const $=id=>document.getElementById(id);
-function loadStats(){let r=JSON.parse(localStorage.getItem('toeicResults')||'[]'); let m=JSON.parse(localStorage.getItem('toeicMistakes')||'[]'); $('homeDone').textContent=r.reduce((a,x)=>a+x.total,0); let acc=r.length?Math.round(r.reduce((a,x)=>a+x.acc,0)/r.length):null; $('homeAcc').textContent=acc===null?'—':acc+'%'; $('bestScore').textContent=r.length?Math.max(...r.map(x=>x.score)):'—'; $('avgAcc').textContent=acc===null?'—':acc+'%'; $('progDone').textContent=r.reduce((a,x)=>a+x.total,0); renderMistakes(m)}
-function showPage(page){document.querySelectorAll('.page').forEach(x=>x.classList.add('hidden')); $(page).classList.remove('hidden'); document.querySelectorAll('.nav button').forEach(b=>b.classList.toggle('active',b.dataset.page===page)); if(page==='mistakes'||page==='progress'||page==='home')loadStats()}
-document.querySelectorAll('.nav button').forEach(b=>b.onclick=()=>showPage(b.dataset.page));
-$('theme').onclick=()=>{document.body.classList.toggle('dark');localStorage.setItem('dark',document.body.classList.contains('dark'));$('theme').textContent=document.body.classList.contains('dark')?'☀ Light mode':'🌙 Dark mode'};
-if(localStorage.getItem('dark')==='true'){document.body.classList.add('dark');$('theme').textContent='☀ Light mode'}
-function renderParts(){const names=[['Part 1','Photographs'],['Part 2','Question-Response'],['Part 3','Conversations'],['Part 4','Talks'],['Part 5','Incomplete Sentences'],['Part 6','Text Completion'],['Part 7','Reading Comprehension']];$('parts').innerHTML=names.map((x,i)=>`<div class="part"><span class="pill">${i<4?'LISTENING':'READING'}</span><h3>${x[0]}</h3><p class="muted">${x[1]}</p><div class="progress"><i style="width:${i===4?0:0}%"></i></div><button class="secondary" onclick="${i===4?'startPractice()':''}">${i===4?'Start Practice':'Coming soon'}</button></div>`).join('')}
-function startPractice(){showPage('practice');idx=0;answers=Array(questions.length).fill(null);marked=Array(questions.length).fill(false);seconds=900;clearInterval(interval);interval=setInterval(()=>{seconds--;renderTimer();if(seconds<=0){clearInterval(interval);submitQuiz()}},1000);renderQuestion()}
-function renderTimer(){let m=Math.floor(seconds/60),s=seconds%60;$('timer').textContent=`${String(m).padStart(2,'0')}:${String(s).padStart(2,'0')}`}
-function renderQuestion(){let q=questions[idx];$('qnum').textContent=`Question ${String(idx+1).padStart(2,'0')} / ${questions.length}`;$('question').textContent=q.q;$('options').innerHTML=q.a.map((x,i)=>`<button class="option ${answers[idx]===i?'selected':''}" onclick="choose(${i})">${String.fromCharCode(65+i)}. ${x}</button>`).join('');$('quizProgress').style.width=((idx+1)/questions.length*100)+'%';$('prev').disabled=idx===0;$('next').textContent=idx===questions.length-1?'Submit':'Next';$('mark').textContent=marked[idx]?'Unmark':'Mark for Review';$('numbers').innerHTML=questions.map((_,i)=>`<button class="${answers[i]!==null?'done':''}" onclick="idx=${i};renderQuestion()">${i+1}</button>`).join('');renderTimer()}
-function choose(i){answers[idx]=i;renderQuestion()}
-$('prev').onclick=()=>{if(idx>0){idx--;renderQuestion()}};$('next').onclick=()=>{if(idx<questions.length-1){idx++;renderQuestion()}else submitQuiz()};$('mark').onclick=()=>{marked[idx]=!marked[idx];renderQuestion()};
-function submitQuiz(){clearInterval(interval);let correct=answers.filter((a,i)=>a===questions[i].c).length,acc=Math.round(correct/questions.length*100),score=Math.round(300+(acc/100)*400);let result={date:new Date().toISOString(),correct,total:questions.length,acc,score};let rs=JSON.parse(localStorage.getItem('toeicResults')||'[]');rs.push(result);localStorage.setItem('toeicResults',JSON.stringify(rs));let ms=JSON.parse(localStorage.getItem('toeicMistakes')||'[]');questions.forEach((q,i)=>{if(answers[i]!==q.c)ms.push({q:q.q,chosen:answers[i]===null?'Unanswered':q.a[answers[i]],correct:q.a[q.c],e:q.e})});localStorage.setItem('toeicMistakes',JSON.stringify(ms.slice(-100)));showResults(result)}
-function showResults(r){showPage('progress');$('progress').innerHTML=`<div class="hero"><span class="pill">TEST COMPLETE</span><h1>Your Demo Result</h1><div class="result-score">${r.score} / 990</div><p class="muted">Estimated indicator • ${r.acc}% accuracy • ${r.correct}/${r.total} correct</p><div class="actions"><button class="primary" onclick="showPage('mistakes')">Review Mistakes</button><button class="secondary" onclick="startPractice()">Try Again</button></div></div><div class="panel"><h2>Performance</h2><p>Correct: <b>${r.correct}</b></p><p>Incorrect: <b>${r.total-r.correct}</b></p><p>Accuracy: <b>${r.acc}%</b></p><p class="footer-note">This is a V1 demo estimate, not an official TOEIC score.</p></div>`}
-function renderMistakes(m){$('mistakeList').innerHTML=m.length?m.slice().reverse().map((x,i)=>`<div class="panel"><span class="pill">MISTAKE</span><h3>${x.q}</h3><p class="wrong">Your answer: ${x.chosen}</p><p class="correct">Correct answer: ${x.correct}</p><p class="muted">${x.e}</p></div>`).join(''):'<div class="panel"><h3>No mistakes yet</h3><p class="muted">Complete a practice test to build your review list.</p></div>'}
-renderParts();loadStats();
-</script>
-</body></html>
+            <!-- PART 6 -->
+            <section id="part6" class="page hidden">
+                <div class="header">
+                    <h1>Part 6 - Text Completion</h1>
+                    <p>Chọn từ hoặc cụm từ thích hợp để hoàn thành đoạn văn</p>
+                </div>
+                <div id="part6-content"></div>
+            </section>
+
+            <!-- PART 7 -->
+            <section id="part7" class="page hidden">
+                <div class="header">
+                    <h1>Part 7 - Reading Comprehension</h1>
+                    <p>Đọc bài viết và trả lời các câu hỏi</p>
+                </div>
+                <div id="part7-content"></div>
+            </section>
+
+            <!-- FULL TEST -->
+            <section id="full-test" class="page hidden">
+                <div class="header">
+                    <h1>Bài thi đầy đủ - Reading</h1>
+                    <p>100 câu (Part 5 + 6 + 7) - 75 phút</p>
+                </div>
+                <div id="full-test-content"></div>
+            </section>
+
+            <!-- HISTORY -->
+            <section id="history" class="page hidden">
+                <div class="header">
+                    <h1>Lịch sử làm bài</h1>
+                </div>
+                <div id="history-content"></div>
+            </section>
+
+            <!-- EXAM INTERFACE -->
+            <div id="exam-container" class="hidden">
+                <div class="exam-header">
+                    <div class="exam-info">
+                        <span id="exam-title">Exam</span>
+                        <span id="exam-part">Part</span>
+                    </div>
+                    <div class="exam-timer" id="exam-timer">75:00</div>
+                    <button class="close-exam" onclick="exitExam()">✕</button>
+                </div>
+
+                <div class="exam-content">
+                    <div class="exam-main">
+                        <div class="progress-bar-full" id="exam-progress"></div>
+                        <div id="exam-body"></div>
+                    </div>
+                    <div class="exam-nav">
+                        <div class="exam-nav-header">Danh sách câu</div>
+                        <div id="exam-questions-nav"></div>
+                    </div>
+                </div>
+
+                <div class="exam-footer">
+                    <button id="exam-prev" class="btn-secondary" onclick="previousQuestion()">← Câu trước</button>
+                    <button id="exam-mark" class="btn-secondary" onclick="toggleMark()">☆ Đánh dấu</button>
+                    <button id="exam-next" class="btn-primary" onclick="nextQuestion()">Câu tiếp →</button>
+                    <button id="exam-submit" class="btn-danger" onclick="submitExam()" style="display:none;">Nộp bài</button>
+                </div>
+            </div>
+
+            <!-- RESULTS -->
+            <div id="results-container" class="hidden">
+                <div class="results-content">
+                    <div id="results-body"></div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="js/storage.js"></script>
+    <script src="js/data-loader.js"></script>
+    <script src="js/exam-engine.js"></script>
+    <script src="js/renderer.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>

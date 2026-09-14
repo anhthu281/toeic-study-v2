@@ -1,397 +1,310 @@
-// TOEIC Study V2 - Main Application Script
-let questions = [];
-let currentQuestion = 0;
-let answers = [];
-let marked = [];
-let timeRemaining = 1200; // 20 minutes in seconds
-let timerInterval = null;
+// Main Application Controller
+let currentPage = 'dashboard';
+let currentExam = null;
+let examState = {
+  answers: [],
+  marked: [],
+  timeRemaining: 0,
+  timerInterval: null,
+  startTime: 0
+};
 
-const $ = (id) => document.getElementById(id);
-
-// Initialize the application
 function init() {
   loadTheme();
-  renderParts();
-  loadStats();
-  loadQuestions();
   setupNavigation();
+  loadDashboard();
+  setupThemeToggle();
 }
 
-// Load questions from JSON
-async function loadQuestions() {
-  try {
-    const response = await fetch('data/part5.json');
-    questions = await response.json();
-    console.log('Questions loaded:', questions.length);
-  } catch (error) {
-    console.error('Error loading questions:', error);
-    alert('Failed to load questions. Please refresh the page.');
-  }
-}
-
-// Setup navigation button clicks
 function setupNavigation() {
-  document.querySelectorAll('.nav button').forEach(btn => {
-    btn.onclick = () => showPage(btn.dataset.page);
+  document.querySelectorAll('.nav-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const page = btn.dataset.page;
+      navigateToPage(page);
+    });
   });
 }
 
-// Show/hide pages
-function showPage(page) {
-  document.querySelectorAll('.page').forEach(p => p.classList.add('hidden'));
-  $(page).classList.remove('hidden');
+function navigateToPage(page) {
+  currentPage = page;
   
-  document.querySelectorAll('.nav button').forEach(btn => {
+  // Hide all pages
+  document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
+  document.getElementById(page).classList.add('active');
+  
+  // Update nav buttons
+  document.querySelectorAll('.nav-btn').forEach(btn => {
     btn.classList.toggle('active', btn.dataset.page === page);
   });
-}
-
-// Render TOEIC parts in home page
-function renderParts() {
-  const parts = [
-    { num: '1', name: 'Photographs', desc: 'Listen and choose' },
-    { num: '2', name: 'Question-Response', desc: 'Choose the correct response' },
-    { num: '3', name: 'Conversations', desc: 'Answer questions about conversations' },
-    { num: '4', name: 'Talks', desc: 'Answer questions about talks' },
-    { num: '5', name: 'Incomplete Sentences', desc: 'Choose the missing word' },
-    { num: '6', name: 'Text Completion', desc: 'Fill in the blanks' },
-    { num: '7', name: 'Reading Comprehension', desc: 'Read and answer' }
-  ];
   
-  const partsHTML = parts.map((p, i) => {
-    if (i === 4) { // Part 5 is active
-      return `<div class="part-card active" onclick="startPractice()">
-        <b>Part ${p.num}</b>
-        <div class="name">${p.name}</div>
-        <div class="desc">${p.desc}</div>
-        <div style="margin-top:8px;font-size:11px;color:var(--pink);font-weight:600">→ START PRACTICE</div>
-      </div>`;
-    }
-    return `<div class="part-card" onclick="alert('Part ${p.num} coming soon')">
-      <b>Part ${p.num}</b>
-      <div class="name">${p.name}</div>
-      <div class="desc">${p.desc}</div>
-      <div style="margin-top:8px;font-size:11px;color:var(--muted)">Coming Soon</div>
-    </div>`;
-  }).join('');
-  
-  $('parts').innerHTML = partsHTML;
-}
-
-// Load stats from localStorage
-function loadStats() {
-  const results = JSON.parse(localStorage.getItem('toeicResults') || '[]');
-  
-  if (results.length > 0) {
-    const bestResult = results.reduce((max, r) => r.score > max.score ? r : max);
-    $('homeScore').textContent = bestResult.score + ' / 990';
-    const totalDone = results.reduce((sum, r) => sum + r.total, 0);
-    $('homeDone').textContent = totalDone;
-    
-    const avgAccuracy = Math.round(results.reduce((sum, r) => sum + r.accuracy, 0) / results.length);
-    $('homeAccuracy').textContent = avgAccuracy + '%';
-    $('homeTests').textContent = results.length;
-    
-    const readingProgress = Math.min((results.length / 5) * 100, 100);
-    const readingBar = document.getElementById('readingProgress');
-    if (readingBar) readingBar.style.width = readingProgress + '%';
+  // Load page content
+  switch(page) {
+    case 'dashboard':
+      loadDashboard();
+      break;
+    case 'part5':
+      loadPart5Menu();
+      break;
+    case 'part6':
+      loadPart6Menu();
+      break;
+    case 'part7':
+      loadPart7Menu();
+      break;
+    case 'full-test':
+      loadFullTestMenu();
+      break;
+    case 'history':
+      loadHistory();
+      break;
   }
 }
 
-// Start practice test
-function startPractice() {
-  if (questions.length === 0) {
-    alert('Questions are loading. Please wait...');
+function loadDashboard() {
+  const history = getTestHistory();
+  const allAnswers = getAllAnswers();
+  const totalQuestions = allAnswers.length;
+  let correct = 0;
+  let accuracy = 0;
+  
+  if (history.length > 0) {
+    const latestTest = history[0];
+    document.getElementById('lastScore').textContent = latestTest.score;
+    correct = latestTest.correct;
+  }
+  
+  if (totalQuestions > 0) {
+    accuracy = Math.round((correct / totalQuestions) * 100);
+    document.getElementById('accuracy').textContent = accuracy + '%';
+  }
+  
+  document.getElementById('completedTests').textContent = history.length;
+  document.getElementById('totalQuestions').textContent = totalQuestions;
+  
+  // Update progress bars
+  updateProgressBars();
+}
+
+function updateProgressBars() {
+  const part5Stats = getPart5Stats();
+  const part6Stats = getPart6Stats();
+  const part7Stats = getPart7Stats();
+  
+  document.getElementById('part5-progress').style.width = part5Stats.progress + '%';
+  document.getElementById('part6-progress').style.width = part6Stats.progress + '%';
+  document.getElementById('part7-progress').style.width = part7Stats.progress + '%';
+}
+
+function loadPart5Menu() {
+  const container = document.getElementById('part5-content');
+  let html = '<div class="tests-menu">';
+  
+  for (let i = 1; i <= 10; i++) {
+    const testId = `part5-test${String(i).padStart(2, '0')}`;
+    const result = getTestResult(testId);
+    const status = result ? ` - Điểm: ${result.score}` : ' - Chưa làm';
+    
+    html += `
+      <div class="test-card">
+        <div class="test-title">Test Part 5 - ${i}</div>
+        <div class="test-status">${status}</div>
+        <button class="btn-primary" onclick="startExam('part5', ${i})">Làm bài</button>
+      </div>
+    `;
+  }
+  
+  html += '</div>';
+  container.innerHTML = html;
+}
+
+function loadPart6Menu() {
+  const container = document.getElementById('part6-content');
+  let html = '<div class="tests-menu">';
+  
+  for (let i = 1; i <= 10; i++) {
+    const testId = `part6-test${String(i).padStart(2, '0')}`;
+    const result = getTestResult(testId);
+    const status = result ? ` - Điểm: ${result.score}` : ' - Chưa làm';
+    
+    html += `
+      <div class="test-card">
+        <div class="test-title">Test Part 6 - ${i}</div>
+        <div class="test-status">${status}</div>
+        <button class="btn-primary" onclick="startExam('part6', ${i})">Làm bài</button>
+      </div>
+    `;
+  }
+  
+  html += '</div>';
+  container.innerHTML = html;
+}
+
+function loadPart7Menu() {
+  const container = document.getElementById('part7-content');
+  let html = '<div class="tests-menu">';
+  
+  for (let i = 1; i <= 10; i++) {
+    const testId = `part7-test${String(i).padStart(2, '0')}`;
+    const result = getTestResult(testId);
+    const status = result ? ` - Điểm: ${result.score}` : ' - Chưa làm';
+    
+    html += `
+      <div class="test-card">
+        <div class="test-title">Test Part 7 - ${i}</div>
+        <div class="test-status">${status}</div>
+        <button class="btn-primary" onclick="startExam('part7', ${i})">Làm bài</button>
+      </div>
+    `;
+  }
+  
+  html += '</div>';
+  container.innerHTML = html;
+}
+
+function loadFullTestMenu() {
+  const container = document.getElementById('full-test-content');
+  let html = '<div class="tests-menu">';
+  
+  for (let i = 1; i <= 10; i++) {
+    const testId = `full-test${String(i).padStart(2, '0')}`;
+    const result = getTestResult(testId);
+    const status = result ? ` - Điểm: ${result.score}` : ' - Chưa làm';
+    
+    html += `
+      <div class="test-card">
+        <div class="test-title">Bài thi đầy đủ - ${i}</div>
+        <div class="test-status">${status}</div>
+        <p style="margin-top: 8px; font-size: 13px; color: var(--muted);">Part 5 (30) + Part 6 (16) + Part 7 (54) = 100 câu</p>
+        <button class="btn-primary" onclick="startFullTest(${i})">Làm bài</button>
+      </div>
+    `;
+  }
+  
+  html += '</div>';
+  container.innerHTML = html;
+}
+
+function loadHistory() {
+  const container = document.getElementById('history-content');
+  const history = getTestHistory();
+  
+  if (history.length === 0) {
+    container.innerHTML = '<p style="color: var(--muted); text-align: center; padding: 40px;">Chưa có lịch sử làm bài</p>';
     return;
   }
   
-  showPage('practice');
-  currentQuestion = 0;
-  answers = Array(questions.length).fill(null);
-  marked = Array(questions.length).fill(false);
-  timeRemaining = 1200;
-  
-  clearInterval(timerInterval);
-  timerInterval = setInterval(updateTimer, 1000);
-  
-  renderQuestion();
-  renderQuestionNav();
-  updateTimer();
-}
-
-// Update and display timer
-function updateTimer() {
-  timeRemaining--;
-  const minutes = Math.floor(timeRemaining / 60);
-  const seconds = timeRemaining % 60;
-  const timerEl = $('timer');
-  if (timerEl) {
-    timerEl.textContent = `${String(minutes).padStart(2, '0')}:${String(seconds).padStart(2, '0')}`;
-  }
-  
-  if (timeRemaining <= 0) {
-    clearInterval(timerInterval);
-    submitTest();
-  }
-}
-
-// Render current question
-function renderQuestion() {
-  const q = questions[currentQuestion];
-  
-  $('qnum').textContent = `Question ${String(currentQuestion + 1).padStart(2, '0')} / ${questions.length}`;
-  $('question').textContent = q.question;
-  
-  const optionsHTML = q.options.map((opt, i) => {
-    const isSelected = answers[currentQuestion] === i;
-    return `<div class="option ${isSelected ? 'selected' : ''}" onclick="selectAnswer(${i})">
-      <input type="radio" name="answer" ${isSelected ? 'checked' : ''}>
-      <span>${String.fromCharCode(65 + i)}. ${opt}</span>
-    </div>`;
-  }).join('');
-  
-  $('options').innerHTML = optionsHTML;
-  
-  // Update progress bar
-  const progress = ((currentQuestion + 1) / questions.length) * 100;
-  const progressBar = document.getElementById('quizProgress');
-  if (progressBar) progressBar.style.width = progress + '%';
-  
-  // Update navigation buttons
-  $('prev').disabled = currentQuestion === 0;
-  $('next').textContent = currentQuestion === questions.length - 1 ? 'Submit Test' : 'Next →';
-  
-  // Update mark button
-  const markBtn = $('mark');
-  if (markBtn) {
-    markBtn.textContent = marked[currentQuestion] ? '★ Marked' : '☆ Mark';
-    markBtn.classList.toggle('marked', marked[currentQuestion]);
-  }
-}
-
-// Select an answer
-function selectAnswer(index) {
-  answers[currentQuestion] = index;
-  renderQuestion();
-  renderQuestionNav();
-}
-
-// Mark current question for review
-function toggleMark() {
-  marked[currentQuestion] = !marked[currentQuestion];
-  renderQuestion();
-  renderQuestionNav();
-}
-
-// Navigate questions
-function previousQuestion() {
-  if (currentQuestion > 0) {
-    currentQuestion--;
-    renderQuestion();
-    renderQuestionNav();
-  }
-}
-
-function nextQuestion() {
-  if (currentQuestion < questions.length - 1) {
-    currentQuestion++;
-    renderQuestion();
-    renderQuestionNav();
-  } else {
-    submitTest();
-  }
-}
-
-function jumpToQuestion(index) {
-  currentQuestion = index;
-  renderQuestion();
-  renderQuestionNav();
-}
-
-// Render question navigator
-function renderQuestionNav() {
-  const navHTML = questions.map((q, i) => {
-    let className = '';
-    if (i === currentQuestion) className = 'current';
-    else if (answers[i] !== null) className = 'answered';
-    if (marked[i]) className += ' marked';
-    
-    return `<button class="${className}" onclick="jumpToQuestion(${i})">${i + 1}</button>`;
-  }).join('');
-  
-  const navContainer = document.getElementById('questionNav');
-  if (navContainer) navContainer.innerHTML = navHTML;
-}
-
-// Submit test
-function submitTest() {
-  clearInterval(timerInterval);
-  
-  const correct = answers.filter((a, i) => a === questions[i].answer).length;
-  const unanswered = answers.filter(a => a === null).length;
-  const accuracy = Math.round((correct / questions.length) * 100);
-  const estimatedScore = Math.round(300 + (accuracy / 100) * 400);
-  
-  const result = {
-    date: new Date().toLocaleString(),
-    score: estimatedScore,
-    correct: correct,
-    total: questions.length,
-    accuracy: accuracy,
-    timeSpent: 1200 - timeRemaining,
-    answers: answers.slice(),
-    marked: marked.slice()
-  };
-  
-  // Save to localStorage
-  const results = JSON.parse(localStorage.getItem('toeicResults') || '[]');
-  results.push(result);
-  localStorage.setItem('toeicResults', JSON.stringify(results));
-  
-  // Save mistakes
-  const mistakes = answers
-    .map((a, i) => a !== questions[i].answer ? {
-      number: i + 1,
-      q: questions[i].question,
-      options: questions[i].options,
-      yourAnswer: a !== null ? questions[i].options[a] : 'Not answered',
-      correctAnswer: questions[i].options[questions[i].answer],
-      explanation: questions[i].explanation,
-      vi: questions[i].vi,
-      grammar: questions[i].grammar
-    } : null)
-    .filter(m => m !== null);
-  
-  if (mistakes.length > 0) {
-    const allMistakes = JSON.parse(localStorage.getItem('toeicMistakes') || '[]');
-    allMistakes.push(...mistakes);
-    localStorage.setItem('toeicMistakes', JSON.stringify(allMistakes));
-  }
-  
-  showResults(result);
-}
-
-// Show results page
-function showResults(result) {
-  showPage('progress');
-  
-  const resultHTML = `
-    <div class="hero">
-      <span class="pill">TEST COMPLETE</span>
-      <h1>Your Demo Result</h1>
-    </div>
-    
-    <div class="result">
-      <div class="result-score">${result.score} / 990</div>
-      <div class="accuracy">Accuracy: ${result.accuracy}%</div>
-      <p class="muted">Correct: ${result.correct} / ${result.total}</p>
-    </div>
-    
-    <div class="grid">
-      <div class="stat">
-        <span class="muted">Estimated Score</span>
-        <b>${result.score}</b>
-      </div>
-      <div class="stat">
-        <span class="muted">Accuracy</span>
-        <b>${result.accuracy}%</b>
-      </div>
-      <div class="stat">
-        <span class="muted">Correct Answers</span>
-        <b>${result.correct}</b>
-      </div>
-      <div class="stat">
-        <span class="muted">Test Date</span>
-        <b style="font-size:12px">${new Date(result.date).toLocaleDateString()}</b>
-      </div>
-    </div>
-    
-    <div style="display:flex;gap:12px;margin-top:24px">
-      <button class="primary" onclick="showReview()" style="flex:1">Review Answers</button>
-      <button class="secondary" onclick="showPage('home')" style="flex:1">Back to Home</button>
-    </div>
-  `;
-  
-  const progressContainer = $('progress');
-  if (progressContainer) progressContainer.innerHTML = resultHTML;
-}
-
-// Show answer review
-function showReview() {
-  showPage('progress');
-  
-  let reviewHTML = `
-    <div class="hero">
-      <span class="pill">ANSWER REVIEW</span>
-      <h1>Review your answers</h1>
-    </div>
-  `;
-  
-  questions.forEach((q, i) => {
-    const userAnswer = answers[i];
-    const correctAnswer = q.answer;
-    const isCorrect = userAnswer === correctAnswer;
-    
-    reviewHTML += `
-      <div class="review-item ${isCorrect ? 'correct' : 'incorrect'}">
-        <div class="label">Question ${i + 1}</div>
-        <div class="q">${q.question}</div>
-        
-        <div class="answer">
-          <strong>Your answer:</strong> ${userAnswer !== null ? q.options[userAnswer] : 'Not answered'}
-          <span class="wrong" style="display:block;margin-top:4px">${!isCorrect ? '✗ Incorrect' : '✓ Correct'}</span>
-        </div>
-        
-        ${!isCorrect ? `
-          <div class="answer">
-            <strong>Correct answer:</strong> ${q.options[correctAnswer]}
-            <span class="right" style="display:block;margin-top:4px">✓ Correct</span>
+  let html = '<div class="history-list">';
+  history.forEach((test, idx) => {
+    html += `
+      <div class="history-item">
+        <div class="history-header">
+          <div>
+            <div class="history-title">${test.testName}</div>
+            <div class="history-date">${new Date(test.date).toLocaleString('vi-VN')}</div>
           </div>
-        ` : ''}
-        
-        <div class="explain">
-          <strong>Explanation:</strong> ${q.explanation}
+          <div class="history-score">${test.score}</div>
         </div>
-        
-        <div class="vi">
-          <strong>Vietnamese:</strong> ${q.vi}
+        <div class="history-stats">
+          <span>Đúng: ${test.correct}/${test.total}</span>
+          <span>Độ chính xác: ${test.accuracy}%</span>
         </div>
-        
-        <div class="grammar">Grammar: ${q.grammar}</div>
       </div>
     `;
   });
-  
-  reviewHTML += `
-    <div style="margin-top:24px">
-      <button class="primary" onclick="showPage('home')" style="width:100%">Back to Home</button>
-    </div>
-  `;
-  
-  const progressContainer = $('progress');
-  if (progressContainer) progressContainer.innerHTML = reviewHTML;
+  html += '</div>';
+  container.innerHTML = html;
 }
 
-// Load and apply theme
-function loadTheme() {
-  const isDark = localStorage.getItem('dark') === 'true';
-  if (isDark) {
-    document.body.classList.add('dark');
-    const themeBtn = $('theme');
-    if (themeBtn) themeBtn.textContent = '☀ Light mode';
-  }
+function setupThemeToggle() {
+  document.getElementById('theme-toggle').addEventListener('click', toggleTheme);
 }
 
-// Toggle dark mode
 function toggleTheme() {
   document.body.classList.toggle('dark');
   const isDark = document.body.classList.contains('dark');
-  localStorage.setItem('dark', isDark);
-  const themeBtn = $('theme');
-  if (themeBtn) {
-    themeBtn.textContent = isDark ? '☀ Light mode' : '🌙 Dark mode';
+  localStorage.setItem('theme', isDark ? 'dark' : 'light');
+  document.getElementById('theme-toggle').textContent = isDark ? '☀️ Light mode' : '🌙 Dark mode';
+}
+
+function loadTheme() {
+  const theme = localStorage.getItem('theme') || 'light';
+  if (theme === 'dark') {
+    document.body.classList.add('dark');
+    document.getElementById('theme-toggle').textContent = '☀️ Light mode';
   }
 }
 
-// Initialize on page load
+// Initialize when DOM is ready
 document.addEventListener('DOMContentLoaded', init);
+
+// Add CSS for menu
+const style = document.createElement('style');
+style.textContent = `
+  .tests-menu {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+  }
+  
+  .test-card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 20px;
+  }
+  
+  .test-title {
+    font-weight: 600;
+    font-size: 18px;
+    margin-bottom: 8px;
+  }
+  
+  .test-status {
+    color: var(--muted);
+    font-size: 14px;
+    margin-bottom: 16px;
+  }
+  
+  .history-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+  
+  .history-item {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 16px;
+  }
+  
+  .history-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 12px;
+  }
+  
+  .history-title {
+    font-weight: 600;
+  }
+  
+  .history-date {
+    color: var(--muted);
+    font-size: 13px;
+  }
+  
+  .history-score {
+    font-size: 24px;
+    font-weight: bold;
+    color: var(--primary);
+  }
+  
+  .history-stats {
+    display: flex;
+    gap: 16px;
+    font-size: 13px;
+    color: var(--muted);
+  }
+`;
+document.head.appendChild(style);
