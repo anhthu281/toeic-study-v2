@@ -1,0 +1,617 @@
+{
+  "grammar": [
+    {
+      "id": "grammar_01",
+      "title": "Danh từ - Noun",
+      "vi_title": "Danh từ - Noun",
+      "definition": "Danh từ là từ dùng để chỉ người, sự vật, địa điểm, ý tưởng, chất lượng hoặc thao tác.",
+      "concepts": [
+        {
+          "name": "Danh từ đếm được (Countable Nouns)",
+          "description": "Những danh từ có thể đếm được, có hình thức số ít và số nhiều.",
+          "examples": ["student, desk, apple", "students, desks, apples"],
+          "rules": ["Thêm -s hoặc -es để tạo số nhiều", "Một số danh từ bất quy tắc: child→children, man→men"]
+        },
+        {
+          "name": "Danh từ không đếm được (Uncountable Nouns)",
+          "description": "Những danh từ không thể đếm được, chỉ có một hình thức.",
+          "examples": ["information, water, equipment, furniture, advice"],
+          "rules": ["Không thêm -s ở số nhiều", "Dùng 'some', 'any', 'much' thay vì 'a/an'"]
+        }
+      ],
+      "position": "Sau mạo từ (the, a, an), trước động từ (trong câu xác định)",
+      "formulas": ["Article + Noun", "Adjective + Noun"],
+      "examples": [
+        { "en": "The report is important.", "vi": "Báo cáo đó rất quan trọng." },
+        { "en": "Employees need proper training.", "vi": "Nhân viên cần đào tạo phù hợp." }
+      ],
+      "toeic_examples": [
+        "The manager reviewed the ______ (document).",
+        "We need to ______ (improve) the quality of our service."
+      ],
+      "common_mistakes": [
+        "Dùng danh từ đơn khi cần danh từ không đếm được (ví dụ: informations)",
+        "Quên thêm -s ở số nhiều (ví dụ: two employee)",
+        "Sử dụng 'a' trước danh từ không đếm được (ví dụ: a information)"
+      ],
+      "tips": [
+        "Nhớ rằng một số danh từ trong tiếng Anh là không đếm được (information, equipment, luggage)",
+        "Trong TOEIC, thường kiểm tra việc lựa chọn mạo từ đúng trước danh từ"
+      ],
+      "word_forms": [
+        { "base": "organize", "noun": "organization", "suffix": "-tion" },
+        { "base": "manage", "noun": "management", "suffix": "-ment" },
+        { "base": "happy", "noun": "happiness", "suffix": "-ness" }
+      ],
+      "mini_quiz": [
+        {
+          "question": "The ______ (finance/financial) department handles all payments.",
+          "correct": "financial",
+          "explanation": "Cần tính từ để bổ sung cho danh từ 'department'"
+        }
+      ]
+    },
+    {
+      "id": "grammar_02",
+      "title": "Động từ - Verb",
+      "vi_title": "Động từ - Verb",
+      "definition": "Động từ là từ chỉ hành động, trạng thái hoặc sự kiện.",
+      "concepts": [
+        {
+          "name": "Động từ chính (Main Verbs)",
+          "description": "Những động từ thể hiện hành động cụ thể.",
+          "examples": ["work, write, manage, create"]
+        },
+        {
+          "name": "Động từ hỗ trợ (Auxiliary Verbs)",
+          "description": "Những động từ giúp tạo thì hoặc giọng.",
+          "examples": ["be, have, do, will, should, can"]
+        },
+        {
+          "name": "Động từ liên kết (Linking Verbs)",
+          "description": "Những động từ kết nối chủ ngữ với tính từ hoặc danh từ bổ sung.",
+          "examples": ["be, appear, seem, become, remain"]
+        }
+      ],
+      "position": "Sau chủ ngữ trong câu",
+      "formulas": ["Subject + Verb + Object", "Subject + Verb + Complement"],
+      "examples": [
+        { "en": "The team works efficiently.", "vi": "Đội làm việc hiệu quả." },
+        { "en": "She is the manager.", "vi": "Cô ấy là người quản lý." }
+      ],
+      "toeic_examples": [
+        "The company ______ (established) in 2015.",
+        "Employees must ______ (wear) safety equipment."
+      ],
+      "common_mistakes": [
+        "Lỗi về thì (sử dụng thì không phù hợp)",
+        "Lỗi về số (động từ không phù hợp với chủ ngữ)",
+        "Lỗi về dạng (sử dụng gerund hay infinitive không đúng)"
+      ],
+      "tips": [
+        "Nhớ luôn kiểm tra chủ ngữ để xác định động từ cần chia ở hình thức nào",
+        "Sau modal verbs (can, must, should), luôn dùng động từ dạng cơ bản"
+      ],
+      "mini_quiz": [
+        {
+          "question": "The manager ______ the meeting yesterday.",
+          "options": ["attend", "attends", "attended", "attending"],
+          "correct": "attended",
+          "explanation": "'Yesterday' chỉ thì quá khứ, nên dùng 'attended'"
+        }
+      ]
+    },
+    {
+      "id": "grammar_03",
+      "title": "Tính từ - Adjective",
+      "vi_title": "Tính từ - Adjective",
+      "definition": "Tính từ là từ dùng để mô tả hoặc bổ sung ý nghĩa cho danh từ.",
+      "concepts": [
+        {
+          "name": "Tính từ mô tả (Descriptive Adjectives)",
+          "description": "Tính từ mô tả tính chất của danh từ.",
+          "examples": ["large, small, important, difficult, new"]
+        },
+        {
+          "name": "Tính từ sở hữu (Possessive Adjectives)",
+          "description": "Tính từ chỉ quyền sở hữu.",
+          "examples": ["my, your, his, her, its, our, their"]
+        }
+      ],
+      "position": "Trước danh từ hoặc sau động từ liên kết (be, seem, appear)",
+      "formulas": ["Adjective + Noun", "Subject + Verb (linking) + Adjective"],
+      "examples": [
+        { "en": "This is a large office.", "vi": "Đây là một văn phòng lớn." },
+        { "en": "The project is important.", "vi": "Dự án đó rất quan trọng." }
+      ],
+      "toeic_examples": [
+        "The ______ (efficient/efficiently) team completed the task on time.",
+        "The meeting was very ______ (productive)."
+      ],
+      "common_mistakes": [
+        "Sử dụng trạng từ thay vì tính từ sau động từ liên kết",
+        "Đặt tính từ ở vị trí sai trong câu"
+      ],
+      "tips": [
+        "Trong TOEIC, thường có câu hỏi phân biệt giữa tính từ và trạng từ",
+        "Luôn nhớ: trước danh từ → tính từ; sau động từ → tính từ (nếu là linking verb)"
+      ],
+      "common_suffixes": ["-ful", "-less", "-ous", "-ive", "-al", "-able", "-ible", "-ic"],
+      "mini_quiz": [
+        {
+          "question": "The ______ (addition/additional) information is on the next page.",
+          "correct": "additional",
+          "explanation": "Tính từ 'additional' bổ sung cho danh từ 'information'"
+        }
+      ]
+    },
+    {
+      "id": "grammar_04",
+      "title": "Trạng từ - Adverb",
+      "vi_title": "Trạng từ - Adverb",
+      "definition": "Trạng từ là từ dùng để bổ sung ý nghĩa cho động từ, tính từ hoặc trạng từ khác.",
+      "concepts": [
+        {
+          "name": "Trạng từ phương thức (Adverbs of Manner)",
+          "description": "Trạng từ mô tả cách thức thực hiện hành động.",
+          "examples": ["quickly, carefully, efficiently, slowly"],
+          "position": "Thường đặt sau động từ hoặc sau object"
+        },
+        {
+          "name": "Trạng từ tần suất (Adverbs of Frequency)",
+          "description": "Trạng từ chỉ tần suất thực hiện hành động.",
+          "examples": ["always, usually, often, sometimes, rarely, never"],
+          "position": "Trước động từ chính (nhưng sau 'to be')"
+        },
+        {
+          "name": "Trạng từ thời gian (Adverbs of Time)",
+          "description": "Trạng từ chỉ thời gian.",
+          "examples": ["today, yesterday, tomorrow, now, then", "soon, already, yet"]
+        }
+      ],
+      "position": "Sau động từ, hoặc sau object, hoặc trước động từ chính",
+      "formulas": ["Verb + Adverb", "Subject + Adverb + Verb"],
+      "examples": [
+        { "en": "She works efficiently.", "vi": "Cô ấy làm việc hiệu quả." },
+        { "en": "We rarely meet after hours.", "vi": "Chúng tôi hiếm khi gặp nhau sau giờ hành chính." }
+      ],
+      "toeic_examples": [
+        "The accountant checked the figures ______ (carefully).",
+        "Employees should ______ (regular/regularly) review the company policies."
+      ],
+      "common_mistakes": [
+        "Sử dụng tính từ thay vì trạng từ để bổ sung cho động từ",
+        "Đặt trạng từ tần suất ở vị trí sai trong câu"
+      ],
+      "tips": [
+        "Hầu hết trạng từ phương thức được tạo bằng cách thêm -ly vào tính từ",
+        "Chú ý các ngoại lệ: good → well, fast → fast, hard → hard"
+      ],
+      "common_suffixes": ["-ly", "-ally", "-ily"],
+      "mini_quiz": [
+        {
+          "question": "The presentation was ______ (excellent/excellently) delivered.",
+          "correct": "excellently",
+          "explanation": "Trạng từ 'excellently' bổ sung cho động từ 'delivered'"
+        }
+      ]
+    },
+    {
+      "id": "grammar_05",
+      "title": "Giới từ - Preposition",
+      "vi_title": "Giới từ - Preposition",
+      "definition": "Giới từ là từ chỉ mối quan hệ về không gian, thời gian, hoặc hướng giữa các từ trong câu.",
+      "concepts": [
+        {
+          "name": "Giới từ không gian (Prepositions of Place)",
+          "description": "Giới từ chỉ vị trí hoặc không gian.",
+          "examples": ["in, on, at, under, above, between, beside"],
+          "usage": [
+            { "prep": "in", "example": "in the room, in France" },
+            { "prep": "on", "example": "on the desk, on the floor" },
+            { "prep": "at", "example": "at the door, at the office" }
+          ]
+        },
+        {
+          "name": "Giới từ thời gian (Prepositions of Time)",
+          "description": "Giới từ chỉ thời gian.",
+          "examples": ["in, on, at, before, after, during, since, for"],
+          "usage": [
+            { "prep": "at", "example": "at 3 p.m., at noon, at night" },
+            { "prep": "on", "example": "on Monday, on the 15th" },
+            { "prep": "in", "example": "in 2024, in the morning, in summer" }
+          ]
+        },
+        {
+          "name": "Giới từ hướng (Prepositions of Direction)",
+          "description": "Giới từ chỉ hướng chuyển động.",
+          "examples": ["to, into, from, out of, toward"]
+        }
+      ],
+      "position": "Sau danh từ hoặc động từ (dùng làm bộ phận của prepositional phrase)",
+      "formulas": ["Preposition + Noun", "Verb + Preposition"],
+      "examples": [
+        { "en": "The meeting is in the conference room.", "vi": "Cuộc họp diễn ra trong phòng hội nghị." },
+        { "en": "Please send the document by email.", "vi": "Vui lòng gửi tài liệu qua email." }
+      ],
+      "toeic_examples": [
+        "The manager is responsible ______ (for/of) organizing the event.",
+        "Applications must be submitted ______ (by/until) Friday."
+      ],
+      "common_mistakes": [
+        "Sử dụng giới từ không phù hợp (to thay vì at)",
+        "Quên giới từ khi cần phải có"
+      ],
+      "tips": [
+        "Học các cụm từ (collocations) với giới từ: responsible for, focus on, communicate with, etc.",
+        "Chú ý sự khác biệt: 'by' (phương tiện/đến hạn), 'on' (bề mặt/ngày), 'in' (bên trong/khoảng thời gian)"
+      ],
+      "mini_quiz": [
+        {
+          "question": "I have been working here ______ five years.",
+          "options": ["since", "for", "during", "while"],
+          "correct": "for",
+          "explanation": "'For' dùng với khoảng thời gian, 'since' dùng với thời điểm cụ thể"
+        }
+      ]
+    },
+    {
+      "id": "grammar_06",
+      "title": "Liên từ - Conjunction",
+      "vi_title": "Liên từ - Conjunction",
+      "definition": "Liên từ là từ dùng để nối hai từ, cụm từ hoặc mệnh đề với nhau.",
+      "concepts": [
+        {
+          "name": "Liên từ phối hợp (Coordinating Conjunctions)",
+          "description": "Liên từ nối hai thành phần có độ quan trọng ngang bằng.",
+          "examples": ["and, but, or, yet, so", "FANBOYS: For, And, Nor, But, Or, Yet, So"]
+        },
+        {
+          "name": "Liên từ cấu trúc (Subordinating Conjunctions)",
+          "description": "Liên từ nối một mệnh đề chính và một mệnh đề phụ.",
+          "examples": ["because, although, while, if, when, since", "after, before, unless"]
+        }
+      ],
+      "position": "Giữa hai từ/cụm từ/mệnh đề",
+      "formulas": ["Clause 1 + Conjunction + Clause 2", "Conjunction + Clause 1 + Clause 2"],
+      "examples": [
+        { "en": "She finished the report, and then she left the office.", "vi": "Cô ấy hoàn thành báo cáo, và sau đó rời văn phòng." },
+        { "en": "Although it rained, we continued the meeting.", "vi": "Mặc dù trời mưa, chúng tôi vẫn tiếp tục cuộc họp." }
+      ],
+      "toeic_examples": [
+        "The employee was late ______ (because/so) of the traffic.",
+        "______ (Although/Because) the deadline was tight, the team completed the project."
+      ],
+      "common_mistakes": [
+        "Sử dụng 'because' thay vì 'because of' trước danh từ",
+        "Dùng 'although' với 'but' trong cùng một câu"
+      ],
+      "tips": [
+        "Nhớ: 'because' + mệnh đề (S+V), 'because of' + danh từ",
+        "Nhớ: 'although' + mệnh đề, 'despite' hoặc 'in spite of' + danh từ"
+      ],
+      "mini_quiz": [
+        {
+          "question": "______ the high cost, the company invested in new equipment.",
+          "options": ["Although", "Despite", "Because", "So"],
+          "correct": "Despite",
+          "explanation": "'Despite' được dùng trước danh từ (the high cost), chứ không phải mệnh đề"
+        }
+      ]
+    },
+    {
+      "id": "grammar_07",
+      "title": "Mạo từ - Article",
+      "vi_title": "Mạo từ - Article",
+      "definition": "Mạo từ là từ dùng trước danh từ để chỉ định hay bất định danh từ đó.",
+      "concepts": [
+        {
+          "name": "Mạo từ xác định (Definite Article)",
+          "description": "'The' dùng khi người nghe/đọc đã biết danh từ đó là gì.",
+          "usage": [
+            "Danh từ được xác định trước đó: 'I bought a book. The book is interesting.'",
+            "Danh từ là duy nhất: 'The president, the sun, the Moon'",
+            "Danh từ đã được xác định bởi tính từ: 'the largest company'"
+          ]
+        },
+        {
+          "name": "Mạo từ không xác định (Indefinite Articles)",
+          "description": "'A' và 'an' dùng khi danh từ chưa được xác định.",
+          "usage": [
+            "'A' trước từ bắt đầu bằng phụ âm: 'a manager, a report'",
+            "'An' trước từ bắt đầu bằng nguyên âm: 'an employee, an office'"
+          ]
+        },
+        {
+          "name": "Không dùng mạo từ (Zero Article)",
+          "description": "Không dùng mạo từ trong một số trường hợp.",
+          "usage": [
+            "Danh từ không đếm được (vô xác định): 'Information is important.'",
+            "Danh từ số nhiều (vô xác định): 'Employees need training.'",
+            "Tên riêng: 'John, France, Google'"
+          ]
+        }
+      ],
+      "position": "Trước danh từ (hoặc trước tính từ + danh từ)",
+      "formulas": ["The + Noun", "A/An + Noun", "Noun (no article)"],
+      "examples": [
+        { "en": "The manager attended the meeting.", "vi": "Người quản lý đã tham dự cuộc họp." },
+        { "en": "I need a new computer.", "vi": "Tôi cần một chiếc máy tính mới." }
+      ],
+      "toeic_examples": [
+        "______ (The/A) application should include your resume.",
+        "Please provide ______ (the/some) additional information."
+      ],
+      "common_mistakes": [
+        "Dùng 'a' hoặc 'the' trước danh từ không đếm được",
+        "Quên 'the' trước danh từ xác định",
+        "Dùng 'a' trước từ bắt đầu bằng nguyên âm"
+      ],
+      "tips": [
+        "Danh từ không đếm được (information, equipment, furniture, etc.) thường không dùng 'a/an'",
+        "Khi nói về 'một cái gì đó lần đầu tiên' → 'a/an', 'lần thứ hai' → 'the'"
+      ],
+      "mini_quiz": [
+        {
+          "question": "______ (An/The) employee with ten years of experience has been promoted.",
+          "correct": "The",
+          "explanation": "'The' được dùng vì danh từ 'employee' đã được xác định bởi cụm 'with ten years of experience'"
+        }
+      ]
+    },
+    {
+      "id": "grammar_08",
+      "title": "Đại từ - Pronoun",
+      "vi_title": "Đại từ - Pronoun",
+      "definition": "Đại từ là từ dùng để thay thế cho danh từ hoặc cụm danh từ.",
+      "concepts": [
+        {
+          "name": "Đại từ nhân xưng (Personal Pronouns)",
+          "description": "Đại từ chỉ người nói, người nghe, hoặc người/vật khác.",
+          "subject": ["I, you, he, she, it, we, they"],
+          "object": ["me, you, him, her, it, us, them"],
+          "usage": "Subject pronouns ở trước động từ, object pronouns ở sau động từ hoặc giới từ"
+        },
+        {
+          "name": "Đại từ sở hữu (Possessive Pronouns)",
+          "description": "Đại từ chỉ quyền sở hữu.",
+          "examples": ["mine, yours, his, hers, ours, theirs"],
+          "usage": "Đứng một mình, không đi với danh từ"
+        },
+        {
+          "name": "Đại từ phản thân (Reflexive Pronouns)",
+          "description": "Đại từ chỉ hành động quay về chủ ngữ.",
+          "examples": ["myself, yourself, himself, herself, itself, ourselves, themselves"]
+        }
+      ],
+      "position": "Thay thế danh từ trong câu",
+      "examples": [
+        { "en": "The manager gave the report to her team. They reviewed it carefully.", "vi": "Người quản lý đưa báo cáo cho đội của cô ấy. Họ xem xét nó cẩn thận." }
+      ],
+      "toeic_examples": [
+        "The employees finished the project and submitted ______ (it/them) on time.",
+        "______ (She/Her) is responsible for the training program."
+      ],
+      "common_mistakes": [
+        "Sử dụng subject pronoun thay vì object pronoun (He gave it to I)",
+        "Sử dụng danh từ khi nên dùng đại từ"
+      ],
+      "tips": [
+        "Chủ ngữ = subject pronoun (I, you, he, she, it, we, they)",
+        "Tân ngữ = object pronoun (me, you, him, her, it, us, them)"
+      ],
+      "mini_quiz": [
+        {
+          "question": "The team submitted their report, and the manager reviewed ______ (it/them) immediately.",
+          "correct": "it",
+          "explanation": "'It' thay thế cho 'report' (số ít)"
+        }
+      ]
+    },
+    {
+      "id": "grammar_09",
+      "title": "Thì - Tenses",
+      "vi_title": "Thì - Tenses",
+      "definition": "Thì là dạng của động từ chỉ khi hành động xảy ra (quá khứ, hiện tại, tương lai).",
+      "concepts": [
+        {
+          "name": "Hiện tại đơn (Simple Present)",
+          "formula": "S + V(base form)",
+          "usage": "Hành động thường xuyên, sự thật chung chung, thủ tục",
+          "examples": ["I work here.", "She manages the team.", "The report shows the results."]
+        },
+        {
+          "name": "Quá khứ đơn (Simple Past)",
+          "formula": "S + V(past) + ed",
+          "usage": "Hành động hoàn thành trong quá khứ, chuỗi hành động",
+          "examples": ["I worked there.", "She managed the project.", "The report showed the results."]
+        },
+        {
+          "name": "Tương lai đơn (Simple Future)",
+          "formula": "S + will + V(base)",
+          "usage": "Hành động sắp tới, dự đoán",
+          "examples": ["I will work.", "She will manage the project.", "The report will show the results."]
+        },
+        {
+          "name": "Hiện tại hoàn thành (Present Perfect)",
+          "formula": "S + have/has + V(past participle)",
+          "usage": "Hành động bắt đầu quá khứ, tiếp tục đến hiện tại",
+          "examples": ["I have worked here for 5 years.", "She has managed three projects."]
+        }
+      ],
+      "toeic_examples": [
+        "The manager ______ (review) the document before the meeting.",
+        "We ______ (work) on this project since Monday."
+      ],
+      "common_mistakes": [
+        "Pha trộn các thì",
+        "Sử dụng thì không phù hợp với time expression"
+      ],
+      "tips": [
+        "Lưu ý các từ chỉ thời gian: yesterday → Simple Past, now → Present, tomorrow → Simple Future",
+        "Present Perfect thường có 'for', 'since', hoặc 'yet'"
+      ],
+      "mini_quiz": [
+        {
+          "question": "She ______ with the company for ten years.",
+          "options": ["works", "has worked", "worked", "will work"],
+          "correct": "has worked",
+          "explanation": "'For ten years' là time expression của Present Perfect"
+        }
+      ]
+    },
+    {
+      "id": "grammar_10",
+      "title": "Câu bị động - Passive Voice",
+      "vi_title": "Câu bị động - Passive Voice",
+      "definition": "Câu bị động là câu trong đó chủ ngữ chịu tác động của hành động thay vì thực hiện hành động.",
+      "structure": [
+        {
+          "tense": "Simple Present Passive",
+          "formula": "S + am/is/are + V(past participle)",
+          "example": "The report is written every month."
+        },
+        {
+          "tense": "Simple Past Passive",
+          "formula": "S + was/were + V(past participle)",
+          "example": "The project was completed last week."
+        },
+        {
+          "tense": "Present Perfect Passive",
+          "formula": "S + have/has + been + V(past participle)",
+          "example": "The budget has been approved by management."
+        }
+      ],
+      "formation": "Passive = be + past participle",
+      "examples": [
+        { "active": "The manager reviewed the report.", "passive": "The report was reviewed by the manager." },
+        { "active": "The company hired ten employees.", "passive": "Ten employees were hired by the company." }
+      ],
+      "toeic_examples": [
+        "The presentation ______ (will be given / will give) by Dr. Smith.",
+        "The contract ______ (was signed / was sign) yesterday."
+      ],
+      "common_mistakes": [
+        "Quên 'be' trong câu bị động",
+        "Sử dụng dạng động từ sai",
+        "Pha trộn chủ động và bị động"
+      ],
+      "tips": [
+        "Khi chủ ngữ không thực hiện hành động mà chịu tác động → bị động",
+        "Luôn nhớ: be + past participle"
+      ],
+      "mini_quiz": [
+        {
+          "question": "The office ______ (was renovated / renovated) last summer.",
+          "correct": "was renovated",
+          "explanation": "'Was renovated' là câu bị động (The office chịu tác động của hành động renovate)"
+        }
+      ]
+    },
+    {
+      "id": "grammar_11",
+      "title": "Sự phù hợp chủ - vị (Subject-Verb Agreement)",
+      "vi_title": "Sự phù hợp chủ - vị (Subject-Verb Agreement)",
+      "definition": "Động từ phải phù hợp với chủ ngữ về số (số ít hay số nhiều).",
+      "rules": [
+        {
+          "rule": "Chủ ngữ số ít → động từ số ít",
+          "examples": ["The manager is here.", "A report shows the results.", "She works efficiently."]
+        },
+        {
+          "rule": "Chủ ngữ số nhiều → động từ số nhiều",
+          "examples": ["The managers are here.", "Reports show the results.", "They work efficiently."]
+        },
+        {
+          "rule": "Hai chủ ngữ nối bằng 'and' → động từ số nhiều",
+          "examples": ["The manager and the assistant are present.", "Tom and Jerry are friends."]
+        },
+        {
+          "rule": "'Either...or' và 'Neither...nor' → động từ phù hợp với chủ ngữ gần nhất",
+          "examples": ["Either the manager or the assistants are available.", "Neither the employees nor the manager is here."]
+        },
+        {
+          "rule": "Danh từ không đếm được → động từ số ít",
+          "examples": ["Information is important.", "Equipment is necessary.", "Furniture was delivered."]
+        }
+      ],
+      "toeic_examples": [
+        "The team ______ (is/are) ready for the presentation.",
+        "Neither the manager nor the staff ______ (was/were) available."
+      ],
+      "common_mistakes": [
+        "Không phù hợp số giữa chủ ngữ và động từ",
+        "Nhầm lẫn 'Either...or' hoặc 'Neither...nor' rules"
+      ],
+      "tips": [
+        "Xác định chủ ngữ chính - đó là từ/cụm từ quyết định động từ",
+        "Cụm từ can không ảnh hưởng đến số của động từ (The manager of the teams is here)"
+      ],
+      "mini_quiz": [
+        {
+          "question": "The manager with two assistants ______ the report.",
+          "options": ["review", "reviews"],
+          "correct": "reviews",
+          "explanation": "Chủ ngữ chính là 'manager' (số ít), nên động từ là 'reviews'. Cụm 'with two assistants' không ảnh hưởng."
+        }
+      ]
+    },
+    {
+      "id": "grammar_12",
+      "title": "Infinitive vs Gerund",
+      "vi_title": "Infinitive vs Gerund",
+      "definition": "Infinitive (to + V) và Gerund (V-ing) là hai cách để sử dụng động từ như danh từ, nhưng có những khác biệt quan trọng.",
+      "concepts": [
+        {
+          "name": "Infinitive (to + verb)",
+          "usage": [
+            "Sau một số động từ: want, need, plan, decide, hope, etc.",
+            "Biểu thị mục đích: I work to earn money.",
+            "Sau 'be able to', 'have to', modal verbs"
+          ],
+          "examples": ["I want to travel.", "We need to finish the project.", "I plan to attend the meeting."]
+        },
+        {
+          "name": "Gerund (verb + -ing)",
+          "usage": [
+            "Sau một số động từ: enjoy, like, finish, stop, avoid, etc.",
+            "Sau giới từ",
+            "Làm chủ ngữ của câu"
+          ],
+          "examples": ["I enjoy working here.", "After finishing the report, I left.", "Swimming is fun."]
+        }
+      ],
+      "comparison": [
+        {
+          "context": "Sau một số động từ",
+          "infinitive_verbs": ["want", "need", "plan", "hope", "decide"],
+          "gerund_verbs": ["enjoy", "like", "finish", "stop", "avoid", "consider"]
+        },
+        {
+          "context": "Sau giới từ",
+          "rule": "Chỉ dùng Gerund",
+          "example": "After finishing the report, I left. (Không: After to finish)"
+        }
+      ],
+      "toeic_examples": [
+        "We need ______ (to submit / submitting) the application by Friday.",
+        "After ______ (to review / reviewing) the document, she sent it to the manager."
+      ],
+      "common_mistakes": [
+        "Dùng infinitive sau giới từ",
+        "Dùng gerund sau động từ yêu cầu infinitive"
+      ],
+      "tips": [
+        "Sau giới từ → luôn dùng Gerund",
+        "Học danh sách những động từ dùng Infinitive và những động từ dùng Gerund"
+      ],
+      "mini_quiz": [
+        {
+          "question": "The company is interested in ______ (to expand / expanding) its business.",
+          "correct": "expanding",
+          "explanation": "Sau giới từ 'in' → Gerund (expanding), không phải Infinitive"
+        }
+      ]
+    }
+  ]
+}
